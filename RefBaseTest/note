@@ -1,0 +1,75 @@
+复制到系统剪贴板问题：
+
+这个问题我搞明白了
+首先的首先, 如果是在terminal下面
+如果你是fedora
+sudo dnf/yum install vim-X11
+如果是你ubuntu
+sudo apt-get install vim-gnome
+这样终端中的vim才能支持系统剪切板的
+后面的操作屋外乎就是"+y/p
+或者载vimrc中添加(fedora下)
+set clipboard=unnamed
+autocmd VimLeave * call system("echo -n $'" . escape(getreg(), "'") . "' | xsel -ib")
+加入之后
+sudo dnf/yum install xsel
+这样就可以直接用y和系统剪切板进行交互了不用再"+y/p了, 直接y或p就可以, p的话是选择缓冲而不是粘贴版缓冲
+
+作者：刚刚
+链接：http://www.zhihu.com/question/21203154/answer/56618821
+来源：知乎
+著作权归作者所有，转载请联系作者获得授权。
+
+
+
+CTAGS
+http://www.cppblog.com/peakflys/archive/2012/12/17/196373.html
+http://jingyan.baidu.com/article/76a7e409b5d525fc3b6e15fc.html
+
+
+TAGLIST:
+http://blog.csdn.net/g_brightboy/article/details/16843899
+TagList插件,是一款基于ctags,在vim代码窗口旁以分割窗口形式(如上图所示）显示当前的代码结构概览,增加代码浏览的便利程度的vim插件.在Vim中加载代码文件后，可以使用以下命令控制taglist：
+
+TlistOpen(直接Tlist也可）打开并将输入焦点至于标签列表窗口,效果如上图所示
+
+TlistClose关闭标签列表窗口
+
+TlistToggle切换标签列表窗口状态(打开←→关闭)，标签列表窗口是否获得焦点取决于其他配置
+
+ctl-w＋w或ctl-w＋ 方向键窗口切换（taglist本质上是一个vim分隔窗口，因此可以使用ctl-w系列快捷键对窗口进行切换操作)在Taglist窗口主要有以下操作
+
+按F1:打开帮助回车键:跳到光标所在的标记的定义处(如将光标移到main函数,按回车键)
+
+o:新建一个窗口,跳到标记定义处
+
+p:预览标记定义(仍然在taglist窗口)
+
+空格:显示标记的原型(如函数原型)
+
+u:更新标记列表(比如源文件新增了一个函数,并在保存后,可在taglist窗口按u)
+
+s:选择排序字段(暂时我也不知道什么意思)
+
+d:删除光标所在的taglist文件(如用vi打开了两个文件f1.c,f2.c可以删除f1.c的标记)
+
+x:放大/缩小taglist窗口
+
++:展开(指标记)
+
+-:折叠
+
+*:全部展开
+
+=:全部折叠
+
+[[:将光标移到前一个文件的起点
+
+]]:将光标移到后一个文件的起点
+
+q:退出taglist窗口
+
+F1:关闭帮助
+
+OmniCppComplete的安装和使用
+http://blog.csdn.net/g_brightboy/article/details/19498983
