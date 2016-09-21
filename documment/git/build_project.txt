@@ -1,0 +1,42 @@
+git# 建立个人级服务器仓库 git init --bare
+
+建立个人级服务器仓库
+mkdir -p ~/git/testgit.git                                             
+cd ~/git/testgit.git                                                   
+git init --bare                                 
+Reinitialized existing Git repository in /home/matt/git/testgit.git/
+ls                                               
+branches/  config  description  HEAD  hooks/  info/  objects/  refs/
+
+通过ls命令可以看出：git init --bare 初始化的目录等同于一个.git目录的内容。这样就比较好理解git的本质：本地仓库的.git和服务器仓库。它们是一回事情。
+% mkdir -p ~/tmp/testgit
+% cd ~/tmp/testgit
+% git init 
+Initialized empty Git repository in /home/matt/tmp/testgit/.git/       
+% touch README               
+ % git add .                                        
+ % git commit -m "initial commit"      
+[master (root-commit) 02ecfad] initial commit                                       
+files changed                                                                   
+ create mode 100644 README                                                           
+ % git remote add origin localhost:/home/matt/git/testgit.git                         
+ % git push -u origin master                  
+Counting objects: 3, done.                                                            
+Writing objects: 100% (3/3), 205 bytes, done.                                         
+Total 3 (delta 0), reused 0 (delta 0)                                                 
+To localhost:/home/matt/git/testgit.git                                               
+ * [new branch]      master -> master                                                 
+Branch master set up to track remote branch master from origin.
+
+
+这几条命令就把一个简单的本地仓库提交到个人的服务器仓库上了。
+
+其中的重点是 git remote add origin localhost:/home/matt/git/testgit.git
+
+这条命令隐含了几个ssh的知识点。熟悉它，可以帮助我们理解通常的git地址
+
+1. git地址其实就是个ssh地址
+
+2. ssh省略用户的话会假定是当前用户。
+
+  比如这个例子，完整的ssh连接是： matt@localhost:/home/matt/git/testgit.git
