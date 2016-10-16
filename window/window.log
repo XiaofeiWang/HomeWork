@@ -1,0 +1,561 @@
+10-15 10:17:22.487   353   367 V WindowManager: handleMessage: entry what=25
+10-15 10:17:22.487   353   367 V WindowManager: handleMessage: exit
+
+10-15 10:17:22.527   353   367 V WindowManager: handleMessage: entry what=25
+10-15 10:17:22.527   353   367 I WindowManager: >>> OPEN TRANSACTION showStrictModeViolation
+10-15 10:17:22.537   353   367 I WindowManager: <<< CLOSE TRANSACTION showStrictModeViolation
+10-15 10:17:22.537   353   367 V WindowManager: handleMessage: exit
+
+10-15 10:17:27.637   353   528 V WindowManager: Looking up client android.os.BinderProxy@b2efc6a8: Window{b2f56ce0 u0 Keyguard}mToken: WindowToken{b2e83a30 null}mAppToken: null
+10-15 10:17:27.817   353   552 V WindowManager: Looking up client android.os.BinderProxy@b2efc6a8: Window{b2f56ce0 u0 Keyguard}mToken: WindowToken{b2e83a30 null}mAppToken: null
+10-15 10:17:27.977   353   529 V WindowManager: Looking up client android.os.BinderProxy@b2efc6a8: Window{b2f56ce0 u0 Keyguard}mToken: WindowToken{b2e83a30 null}mAppToken: null
+10-15 10:17:28.357   353   417 V WindowManager: Looking up client android.os.BinderProxy@b2efc6a8: Window{b2f56ce0 u0 Keyguard}mToken: WindowToken{b2e83a30 null}mAppToken: null
+10-15 10:17:28.397   353   528 V WindowManager: Looking up client android.os.BinderProxy@b2efc6a8: Window{b2f56ce0 u0 Keyguard}mToken: WindowToken{b2e83a30 null}mAppToken: null
+10-15 10:17:28.897   353   367 V WindowManager: handleMessage: entry what=25
+10-15 10:17:28.897   353   367 I WindowManager: >>> OPEN TRANSACTION showStrictModeViolation
+10-15 10:17:28.897   353   367 I WindowManager: <<< CLOSE TRANSACTION showStrictModeViolation
+10-15 10:17:28.897   353   367 V WindowManager: handleMessage: exit
+10-15 10:17:29.167   353   367 V WindowManager: handleMessage: entry what=25
+10-15 10:17:29.167   353   367 I WindowManager: >>> OPEN TRANSACTION showStrictModeViolation
+10-15 10:17:29.167   353   367 I WindowManager: <<< CLOSE TRANSACTION showStrictModeViolation
+10-15 10:17:29.167   353   367 V WindowManager: handleMessage: exit
+10-15 10:17:29.447   353   417 I WindowManager: 
+10-15 10:17:29.447   353   417 I WindowManager: 
+10-15 10:17:29.447   353   417 I WindowManager: relayoutWindow begin client: android.view.IWindow$Stub$Proxy@b2facee8
+10-15 10:17:29.447   353   417 V WindowManager: Looking up client android.os.BinderProxy@b2efc6a8: Window{b2f56ce0 u0 Keyguard}mToken: WindowToken{b2e83a30 null}mAppToken: null
+10-15 10:17:29.447   353   417 V WindowManager: Relayout Window{b2f56ce0 u0 Keyguard}mToken: WindowToken{b2e83a30 null}mAppToken: null: viewVisibility=8 req=320x480 WM.LayoutParams{(0,0)(fillxfill) sim=#10 ty=2004 fl=#d130900 pfl=0xa fmt=-3 wanim=0x7f0d0003 or=5 vsysui=0xe00700 if=0x4 userActivityTimeout=10000}
+10-15 10:17:29.447   353   417 I WindowManager: Relayout Window{b2f56ce0 u0 Keyguard}mToken: WindowToken{b2e83a30 null}mAppToken: null: oldVis=0 newVis=8
+10-15 10:17:29.447   353   417 I WindowManager: java.lang.RuntimeException
+10-15 10:17:29.447   353   417 I WindowManager: 	at com.android.server.wm.WindowManagerService.relayoutWindow(WindowManagerService.java:2934)
+10-15 10:17:29.447   353   417 I WindowManager: 	at com.android.server.wm.Session.relayout(Session.java:194)
+10-15 10:17:29.447   353   417 I WindowManager: 	at android.view.IWindowSession$Stub.onTransact(IWindowSession.java:235)
+10-15 10:17:29.447   353   417 I WindowManager: 	at com.android.server.wm.Session.onTransact(Session.java:125)
+10-15 10:17:29.447   353   417 I WindowManager: 	at android.os.Binder.execTransact(Binder.java:404)
+10-15 10:17:29.447   353   417 I WindowManager: 	at dalvik.system.NativeStart.run(Native Method)
+10-15 10:17:29.447   353   417 I WindowManager: viewVisibility: 8
+10-15 10:17:29.447   353   417 I WindowManager: win.mAppToken is null
+10-15 10:17:29.457   353   417 I WindowManager: Relayout invis Window{b2f56ce0 u0 Keyguard}mToken: WindowToken{b2e83a30 null}mAppToken: null: mExiting=false
+10-15 10:17:29.467   353   417 I WindowManager: Releasing surface in: Window{b2f56ce0 u0 Keyguard EXITING}
+10-15 10:17:29.467   353   417 V WindowManager: Looking for focus: 4 = Window{b2f41d40 u0 StatusBar}mToken: WindowToken{b2e83a30 null}mAppToken: null, flags=25428040, canReceive=false
+10-15 10:17:29.467   353   417 V WindowManager: Looking for focus: 3 = Window{b2f56ce0 u0 Keyguard EXITING}, flags=219351296, canReceive=false
+10-15 10:17:29.467   353   417 V WindowManager: Looking for focus: 2 = Window{b2ef2c48 u0 KeyguardScrim}mToken: WindowToken{b2e83a30 null}mAppToken: null, flags=1116416, canReceive=false
+10-15 10:17:29.467   353   417 V WindowManager: Looking for focus: 1 = Window{b2f6c158 u0 com.example.android.livecubes.cube1.CubeWallpaper1}mToken: WindowToken{b2ed8170 android.os.Binder@b2f4bbc8}mAppToken: null, flags=776, canReceive=false
+10-15 10:17:29.467   353   417 V WindowManager: Looking for focus: 0 = Window{b2ea2bd0 u0 com.android.launcher/com.android.launcher2.Launcher}mToken: AppWindowToken{b2f18078 token=Token{b2f45878 ActivityRecord{b2f45600 u0 com.android.launcher/com.android.launcher2.Launcher t1}}}mAppToken: null, flags=26280192, canReceive=false
+10-15 10:17:29.467   353   417 V WindowManager: findFocusedWindow: No focusable windows.
+10-15 10:17:29.467   353   367 V WindowManager: handleMessage: entry what=2
+10-15 10:17:29.467   353   417 V WindowManager: Changing focus from Window{b2f56ce0 u0 Keyguard EXITING} to null Callers=com.android.server.wm.WindowManagerService.relayoutWindow:3075 com.android.server.wm.Session.relayout:194 android.view.IWindowSession$Stub.onTransact:235 com.android.server.wm.Session.onTransact:125 
+10-15 10:17:29.477   353   417 D WindowManager: Input focus has changed to null
+10-15 10:17:29.477   353   417 V WindowManager: Checking app orientation: AppWindowToken{b2f18078 token=Token{b2f45878 ActivityRecord{b2f45600 u0 com.android.launcher/com.android.launcher2.Launcher t1}}}
+10-15 10:17:29.477   353   417 V WindowManager: Done at AppWindowToken{b2f18078 token=Token{b2f45878 ActivityRecord{b2f45600 u0 com.android.launcher/com.android.launcher2.Launcher t1}}} -- full screen, return 5
+10-15 10:17:29.477   353   417 V WindowManager: 
+10-15 10:17:29.477   353   417 V WindowManager: 
+10-15 10:17:29.477   353   417 V WindowManager: performLayoutAndPlaceSurfacesLockedInner: entry. Called by com.android.server.wm.WindowManagerService.performLayoutAndPlaceSurfacesLockedLoop:8280 com.android.server.wm.WindowManagerService.performLayoutAndPlaceSurfacesLocked:8222 com.android.server.wm.WindowManagerService.relayoutWindow:3101 
+10-15 10:17:29.477   353   417 V WindowManager: mDisplayContents size: 1
+10-15 10:17:29.477   353   417 V WindowManager: displayContent: com.android.server.wm.DisplayContent@b2e5fa30
+10-15 10:17:29.477   353   417 I WindowManager: >>> OPEN TRANSACTION performLayoutAndPlaceSurfaces
+10-15 10:17:29.477   353   417 V WindowManager: Win #4 Window{b2f41d40 u0 StatusBar}mToken: WindowToken{b2e83a30 null}mAppToken: null: isOnScreen=true mDrawState=4
+10-15 10:17:29.487   353   417 V WindowManager: Win #3 Window{b2f56ce0 u0 Keyguard EXITING}: isOnScreen=true mDrawState=4
+10-15 10:17:29.487   353   417 V WindowManager: Found wallpaper target: #3=Window{b2f56ce0 u0 Keyguard EXITING}
+10-15 10:17:29.487   353   417 V WindowManager: Win Window{b2f56ce0 u0 Keyguard EXITING}: token animating, looking behind.
+10-15 10:17:29.487   353   417 V WindowManager: Win #2 Window{b2ef2c48 u0 KeyguardScrim}mToken: WindowToken{b2e83a30 null}mAppToken: null: isOnScreen=false mDrawState=0
+10-15 10:17:29.487   353   417 V WindowManager: Win #0 Window{b2ea2bd0 u0 com.android.launcher/com.android.launcher2.Launcher}mToken: AppWindowToken{b2f18078 token=Token{b2f45878 ActivityRecord{b2f45600 u0 com.android.launcher/com.android.launcher2.Launcher t1}}}mAppToken: null: isOnScreen=false mDrawState=4
+10-15 10:17:29.487   353   417 V WindowManager: Wallpaper vis: target Window{b2f56ce0 u0 Keyguard EXITING}, obscured=false anim=null upper=null lower=null
+10-15 10:17:29.487   353   417 I WindowManager: dispatchWallpaperVisibility: 
+10-15 10:17:29.487   353   417 I WindowManager: java.lang.RuntimeException: WindowManager
+10-15 10:17:29.487   353   417 I WindowManager: 	at com.android.server.wm.WindowManagerService.dispatchWallpaperVisibility(WindowManagerService.java:2120)
+10-15 10:17:29.487   353   417 I WindowManager: 	at com.android.server.wm.WindowManagerService.adjustWallpaperWindowsLocked(WindowManagerService.java:1887)
+10-15 10:17:29.487   353   417 I WindowManager: 	at com.android.server.wm.WindowManagerService.performLayoutAndPlaceSurfacesLockedInner(WindowManagerService.java:9088)
+10-15 10:17:29.487   353   417 I WindowManager: 	at com.android.server.wm.WindowManagerService.performLayoutAndPlaceSurfacesLockedLoop(WindowManagerService.java:8280)
+10-15 10:17:29.487   353   417 I WindowManager: 	at com.android.server.wm.WindowManagerService.performLayoutAndPlaceSurfacesLocked(WindowManagerService.java:8222)
+10-15 10:17:29.487   353   417 I WindowManager: 	at com.android.server.wm.WindowManagerService.relayoutWindow(WindowManagerService.java:3101)
+10-15 10:17:29.487   353   417 I WindowManager: 	at com.android.server.wm.Session.relayout(Session.java:194)
+10-15 10:17:29.487   353   417 I WindowManager: 	at android.view.IWindowSession$Stub.onTransact(IWindowSession.java:235)
+10-15 10:17:29.487   353   417 I WindowManager: 	at com.android.server.wm.Session.onTransact(Session.java:125)
+10-15 10:17:29.487   353   417 I WindowManager: 	at android.os.Binder.execTransact(Binder.java:404)
+10-15 10:17:29.487   353   417 I WindowManager: 	at dalvik.system.NativeStart.run(Native Method)
+10-15 10:17:29.487   353   417 V WindowManager: Wallpaper visibility: true
+10-15 10:17:29.487   353   417 V WindowManager: adjustWallpaper win Window{b2f6c158 u0 com.example.android.livecubes.cube1.CubeWallpaper1}mToken: WindowToken{b2ed8170 android.os.Binder@b2f4bbc8}mAppToken: null anim layer: 21005
+10-15 10:17:29.487   353   417 V WindowManager: Wallpaper removing at 1: Window{b2f6c158 u0 com.example.android.livecubes.cube1.CubeWallpaper1}mToken: WindowToken{b2ed8170 android.os.Binder@b2f4bbc8}mAppToken: null
+10-15 10:17:29.487   353   417 V WindowManager: Moving wallpaper Window{b2f6c158 u0 com.example.android.livecubes.cube1.CubeWallpaper1}mToken: WindowToken{b2ed8170 android.os.Binder@b2f4bbc8}mAppToken: null from 1 to 1
+10-15 10:17:29.497   353   417 V WindowManager: 
+10-15 10:17:29.497   353   417 V WindowManager: 
+10-15 10:17:29.497   353   417 V WindowManager: performLayoutLockedInner
+10-15 10:17:29.497   353   417 V WindowManager: WindowState: Window{b2f41d40 u0 StatusBar}mToken: WindowToken{b2e83a30 null}mAppToken: null
+10-15 10:17:29.497   353   417 V WindowManager: WindowState: Window{b2f56ce0 u0 Keyguard EXITING}
+10-15 10:17:29.497   353   417 V WindowManager: WindowState: Window{b2ef2c48 u0 KeyguardScrim}mToken: WindowToken{b2e83a30 null}mAppToken: null
+10-15 10:17:29.497   353   417 V WindowManager: WindowState: Window{b2f6c158 u0 com.example.android.livecubes.cube1.CubeWallpaper1}mToken: WindowToken{b2ed8170 android.os.Binder@b2f4bbc8}mAppToken: null
+10-15 10:17:29.497   353   417 V WindowManager: WindowState: Window{b2ea2bd0 u0 com.android.launcher/com.android.launcher2.Launcher}mToken: AppWindowToken{b2f18078 token=Token{b2f45878 ActivityRecord{b2f45600 u0 com.android.launcher/com.android.launcher2.Launcher t1}}}mAppToken: null
+10-15 10:17:29.497   353   417 V WindowManager: -------------------------------------
+10-15 10:17:29.497   353   417 V WindowManager: performLayout: needed=false dw=320 dh=480
+10-15 10:17:29.497   353   417 I WindowManager: mDock rect: (0,0 - 320,480)
+10-15 10:17:29.497   353   417 V WindowManager: Status bar: dock=[0,25][320,480] content=[0,25][320,480] cur=[0,25][320,480]
+10-15 10:17:29.497   353   417 V WindowManager: 1ST PASS Window{b2f41d40 u0 StatusBar}mToken: WindowToken{b2e83a30 null}mAppToken: null: gone=false mHaveFrame=true mLayoutAttached=false screen changed=false
+10-15 10:17:29.507   353   417 V WindowManager:   VIS: mViewVisibility=0 mRelayoutCalled=true hidden=false hiddenRequested=false mAttachedHidden=false
+10-15 10:17:29.507   353   417 V WindowManager:   LAYOUT: mFrame=Rect(0, 0 - 320, 25) mContainingFrame=Rect(0, 0 - 320, 480) mDisplayFrame=Rect(0, 0 - 320, 480)
+10-15 10:17:29.507   353   417 V WindowManager: 1ST PASS Window{b2f56ce0 u0 Keyguard EXITING}: gone=true mHaveFrame=true mLayoutAttached=false screen changed=false
+10-15 10:17:29.507   353   417 V WindowManager:   GONE: mViewVisibility=8 mRelayoutCalled=true hidden=false hiddenRequested=false mAttachedHidden=false
+10-15 10:17:29.507   353   417 V WindowManager: 1ST PASS Window{b2ef2c48 u0 KeyguardScrim}mToken: WindowToken{b2e83a30 null}mAppToken: null: gone=true mHaveFrame=true mLayoutAttached=false screen changed=true
+10-15 10:17:29.507   353   417 V WindowManager:   GONE: mViewVisibility=8 mRelayoutCalled=true hidden=false hiddenRequested=false mAttachedHidden=false
+10-15 10:17:29.507   353   417 V WindowManager: 1ST PASS Window{b2f6c158 u0 com.example.android.livecubes.cube1.CubeWallpaper1}mToken: WindowToken{b2ed8170 android.os.Binder@b2f4bbc8}mAppToken: null: gone=false mHaveFrame=true mLayoutAttached=false screen changed=false
+10-15 10:17:29.507   353   417 V WindowManager:   VIS: mViewVisibility=0 mRelayoutCalled=true hidden=false hiddenRequested=false mAttachedHidden=false
+10-15 10:17:29.507   353   417 V WindowManager: layoutWindowLw(com.example.android.livecubes.cube1.CubeWallpaper1): IN_SCREEN
+10-15 10:17:29.507   353   417 V WindowManager: Compute frame com.example.android.livecubes.cube1.CubeWallpaper1: sim=#0 attach=null type=2013 flags=0x00000308 pf=[0,0][320,480] df=[-10000,-10000][10000,10000] of=[-10000,-10000][10000,10000] cf=[-10000,-10000][10000,10000] vf=[-10000,-10000][10000,10000] dcf=[0,0][320,480]
+10-15 10:17:29.507   353   417 V WindowManager:   LAYOUT: mFrame=Rect(0, 0 - 320, 480) mContainingFrame=Rect(0, 0 - 320, 480) mDisplayFrame=Rect(-10000, -10000 - 10000, 10000)
+10-15 10:17:29.507   353   417 V WindowManager: 1ST PASS Window{b2ea2bd0 u0 com.android.launcher/com.android.launcher2.Launcher}mToken: AppWindowToken{b2f18078 token=Token{b2f45878 ActivityRecord{b2f45600 u0 com.android.launcher/com.android.launcher2.Launcher t1}}}mAppToken: null: gone=false mHaveFrame=true mLayoutAttached=false screen changed=false
+10-15 10:17:29.507   353   417 V WindowManager:   VIS: mViewVisibility=0 mRelayoutCalled=true hidden=false hiddenRequested=false mAttachedHidden=false
+10-15 10:17:29.507   353   417 V WindowManager: layoutWindowLw(com.android.launcher/com.android.launcher2.Launcher): IN_SCREEN, INSET_DECOR
+10-15 10:17:29.507   353   417 V WindowManager: Compute frame com.android.launcher/com.android.launcher2.Launcher: sim=#20 attach=null type=1 flags=0x01910100 pf=[0,0][320,480] df=[0,0][320,480] of=[0,0][320,480] cf=[0,25][320,480] vf=[0,25][320,480] dcf=[0,0][320,480]
+10-15 10:17:29.507   353   417 V WindowManager:   LAYOUT: mFrame=Rect(0, 0 - 320, 480) mContainingFrame=Rect(0, 0 - 320, 480) mDisplayFrame=Rect(0, 0 - 320, 480)
+10-15 10:17:29.507   353   417 I WindowManager: Win Window{b2f41d40 u0 StatusBar}mToken: WindowToken{b2e83a30 null}mAppToken: null: isVisibleOrBehindKeyguardLw=true
+10-15 10:17:29.507   353   417 I WindowManager: Win Window{b2f56ce0 u0 Keyguard EXITING}: isVisibleOrBehindKeyguardLw=false
+10-15 10:17:29.507   353   417 I WindowManager: Win Window{b2f6c158 u0 com.example.android.livecubes.cube1.CubeWallpaper1}mToken: WindowToken{b2ed8170 android.os.Binder@b2f4bbc8}mAppToken: null: isVisibleOrBehindKeyguardLw=true
+10-15 10:17:29.507   353   417 I WindowManager: Win Window{b2ea2bd0 u0 com.android.launcher/com.android.launcher2.Launcher}mToken: AppWindowToken{b2f18078 token=Token{b2f45878 ActivityRecord{b2f45600 u0 com.android.launcher/com.android.launcher2.Launcher t1}}}mAppToken: null: isVisibleOrBehindKeyguardLw=true
+10-15 10:17:29.507   353   417 V WindowManager: Fullscreen window: Window{b2ea2bd0 u0 com.android.launcher/com.android.launcher2.Launcher}mToken: AppWindowToken{b2f18078 token=Token{b2f45878 ActivityRecord{b2f45600 u0 com.android.launcher/com.android.launcher2.Launcher t1}}}mAppToken: null
+10-15 10:17:29.507   353   417 I WindowManager: force=false forcefkg=false top=Window{b2ea2bd0 u0 com.android.launcher/com.android.launcher2.Launcher}mToken: AppWindowToken{b2f18078 token=Token{b2f45878 ActivityRecord{b2f45600 u0 com.android.launcher/com.android.launcher2.Launcher t1}}}mAppToken: null
+10-15 10:17:29.507   353   417 D WindowManager: frame: Rect(0, 0 - 320, 480) shown frame: RectF(0.0, 0.0, 320.0, 480.0)
+10-15 10:17:29.517   353   417 D WindowManager: attr: WM.LayoutParams{(0,0)(fillxfill) sim=#20 ty=1 fl=#1910100 pfl=0x8 fmt=-2 wanim=0x10302a1 vsysui=0x400} lp.flags=0x1910100
+10-15 10:17:29.517   353   417 V WindowManager: ** SHOWING status bar: top is not fullscreen
+10-15 10:17:29.517   353   417 V WindowManager: finishPostLayoutPolicyLw: mHideKeyguard=false
+10-15 10:17:29.517   353   417 V WindowManager: Resizing Window{b2f41d40 u0 StatusBar}mToken: WindowToken{b2e83a30 null}mAppToken: null: configChanged=false last=Rect(0, 0 - 320, 25) frame=Rect(0, 0 - 320, 25)
+10-15 10:17:29.517   353   417 V WindowManager: Resizing Window{b2f6c158 u0 com.example.android.livecubes.cube1.CubeWallpaper1}mToken: WindowToken{b2ed8170 android.os.Binder@b2f4bbc8}mAppToken: null: configChanged=false last=Rect(0, 0 - 320, 480) frame=Rect(0, 0 - 320, 480)
+10-15 10:17:29.517   353   417 V WindowManager: Resizing Window{b2ea2bd0 u0 com.android.launcher/com.android.launcher2.Launcher}mToken: AppWindowToken{b2f18078 token=Token{b2f45878 ActivityRecord{b2f45600 u0 com.android.launcher/com.android.launcher2.Launcher t1}}}mAppToken: null: configChanged=false last=Rect(0, 0 - 320, 480) frame=Rect(0, 0 - 320, 480)
+10-15 10:17:29.517   353   417 I WindowManager: <<< CLOSE TRANSACTION performLayoutAndPlaceSurfaces
+10-15 10:17:29.517   353   417 I WindowManager: >>> OPEN TRANSACTION setFocusedStackFrame
+10-15 10:17:29.517   353   417 I WindowManager: >>> CLOSE TRANSACTION setFocusedStackFrame
+10-15 10:17:29.527   353   417 I WindowManager: enableScreenIfNeededLocked: mDisplayEnabled=true mForceDisplayEnabled=false mShowingBootMessages=false mSystemBooted=true
+10-15 10:17:29.527   353   417 I WindowManager: java.lang.RuntimeException: here
+10-15 10:17:29.527   353   417 I WindowManager: 	at com.android.server.wm.WindowManagerService.enableScreenIfNeededLocked(WindowManagerService.java:5343)
+10-15 10:17:29.527   353   417 I WindowManager: 	at com.android.server.wm.WindowManagerService.performLayoutAndPlaceSurfacesLockedInner(WindowManagerService.java:9585)
+10-15 10:17:29.527   353   417 I WindowManager: 	at com.android.server.wm.WindowManagerService.performLayoutAndPlaceSurfacesLockedLoop(WindowManagerService.java:8280)
+10-15 10:17:29.527   353   417 I WindowManager: 	at com.android.server.wm.WindowManagerService.performLayoutAndPlaceSurfacesLocked(WindowManagerService.java:8222)
+10-15 10:17:29.527   353   417 I WindowManager: 	at com.android.server.wm.WindowManagerService.relayoutWindow(WindowManagerService.java:3101)
+10-15 10:17:29.527   353   417 I WindowManager: 	at com.android.server.wm.Session.relayout(Session.java:194)
+10-15 10:17:29.527   353   417 I WindowManager: 	at android.view.IWindowSession$Stub.onTransact(IWindowSession.java:235)
+10-15 10:17:29.527   353   417 I WindowManager: 	at com.android.server.wm.Session.onTransact(Session.java:125)
+10-15 10:17:29.527   353   417 I WindowManager: 	at android.os.Binder.execTransact(Binder.java:404)
+10-15 10:17:29.527   353   417 I WindowManager: 	at dalvik.system.NativeStart.run(Native Method)
+10-15 10:17:29.527   353   417 E WindowManager: performLayoutAndPlaceSurfacesLockedInner exit: animating=false
+10-15 10:17:29.527   353   417 V WindowManager: Relayout given client android.os.BinderProxy@b2efc6a8, requestedWidth=320, requestedHeight=480, viewVisibility=8
+10-15 10:17:29.527   353   417 V WindowManager: Relayout returning frame=Rect(0, 0 - 320, 480), surface=Surface(name=null)/@0xb2f74da8
+10-15 10:17:29.527   353   417 V WindowManager: Relayout of Window{b2f56ce0 u0 Keyguard EXITING}: focusMayChange=true
+10-15 10:17:29.527   353   417 V WindowManager: Relayout complete Window{b2f56ce0 u0 Keyguard EXITING}: outFrame=[0,0][320,480]
+10-15 10:17:29.527   353   367 I WindowManager: Focus moving from Window{b2f56ce0 u0 Keyguard EXITING} to null
+10-15 10:17:29.527   353   367 I WindowManager: Losing focus: Window{b2f56ce0 u0 Keyguard EXITING}
+10-15 10:17:29.527   353   367 V WindowManager: handleMessage: exit
+10-15 10:17:29.527   353   417 I WindowManager: relayoutWindow end
+10-15 10:17:29.537   353   367 I WindowManager:   SURFACE alpha=0.0 layer=21000 matrix=[1.0,0.0][0.0,1.0]: Window{b2ea2bd0 u0 com.android.launcher/com.android.launcher2.Launcher}mToken: AppWindowToken{b2f18078 token=Token{b2f45878 ActivityRecord{b2f45600 u0 com.android.launcher/com.android.launcher2.Launcher t1}}}mAppToken: null
+10-15 10:17:29.547   353   367 I WindowManager:   SURFACE SHOW (performLayout): Window{b2ea2bd0 u0 com.android.launcher/com.android.launcher2.Launcher}mToken: AppWindowToken{b2f18078 token=Token{b2f45878 ActivityRecord{b2f45600 u0 com.android.launcher/com.android.launcher2.Launcher t1}}}mAppToken: null
+10-15 10:17:29.547   353   367 V WindowManager: Setting FocusedStackFrame to layer=21001
+10-15 10:17:29.567   353   367 I WindowManager:   SURFACE POS -0.003036499, -0.004547119: Window{b2f56ce0 u0 Keyguard EXITING}
+10-15 10:17:29.577   353   367 I WindowManager:   SURFACE alpha=0.9676 layer=131000 matrix=[1.000019,0.0][0.0,1.000019]: Window{b2f56ce0 u0 Keyguard EXITING}
+10-15 10:17:29.577   353   367 V WindowManager: Setting FocusedStackFrame to layer=21001
+10-15 10:17:29.577   353   367 V WindowManager: handleMessage: entry what=4
+10-15 10:17:29.607   353   367 V WindowManager: 
+10-15 10:17:29.607   353   367 V WindowManager: 
+10-15 10:17:29.607   353   367 V WindowManager: performLayoutAndPlaceSurfacesLockedInner: entry. Called by com.android.server.wm.WindowManagerService.performLayoutAndPlaceSurfacesLockedLoop:8280 com.android.server.wm.WindowManagerService.performLayoutAndPlaceSurfacesLocked:8222 com.android.server.wm.WindowManagerService.access$300:157 
+10-15 10:17:29.607   353   367 V WindowManager: Looking for focus: 4 = Window{b2f41d40 u0 StatusBar}mToken: WindowToken{b2e83a30 null}mAppToken: null, flags=25428040, canReceive=false
+10-15 10:17:29.607   353   367 V WindowManager: Looking for focus: 3 = Window{b2f56ce0 u0 Keyguard EXITING}, flags=219351296, canReceive=false
+10-15 10:17:29.607   353   367 V WindowManager: Looking for focus: 2 = Window{b2ef2c48 u0 KeyguardScrim}mToken: WindowToken{b2e83a30 null}mAppToken: null, flags=1116416, canReceive=false
+10-15 10:17:29.607   353   367 V WindowManager: Looking for focus: 1 = Window{b2f6c158 u0 com.example.android.livecubes.cube1.CubeWallpaper1}mToken: WindowToken{b2ed8170 android.os.Binder@b2f4bbc8}mAppToken: null, flags=776, canReceive=false
+10-15 10:17:29.607   353   367 V WindowManager: Looking for focus: 0 = Window{b2ea2bd0 u0 com.android.launcher/com.android.launcher2.Launcher}mToken: AppWindowToken{b2f18078 token=Token{b2f45878 ActivityRecord{b2f45600 u0 com.android.launcher/com.android.launcher2.Launcher t1}}}mAppToken: null, flags=26280192, canReceive=true
+10-15 10:17:29.607   353   367 V WindowManager: findFocusedWindow: Found new focus @ 0 = Window{b2ea2bd0 u0 com.android.launcher/com.android.launcher2.Launcher}mToken: AppWindowToken{b2f18078 token=Token{b2f45878 ActivityRecord{b2f45600 u0 com.android.launcher/com.android.launcher2.Launcher t1}}}mAppToken: null
+10-15 10:17:29.607   353   367 V WindowManager: Changing focus from null to Window{b2ea2bd0 u0 com.android.launcher/com.android.launcher2.Launcher}mToken: AppWindowToken{b2f18078 token=Token{b2f45878 ActivityRecord{b2f45600 u0 com.android.launcher/com.android.launcher2.Launcher t1}}}mAppToken: null Callers=com.android.server.wm.WindowManagerService.performLayoutAndPlaceSurfacesLockedInner:9014 com.android.server.wm.WindowManagerService.performLayoutAndPlaceSurfacesLockedLoop:8280 com.android.server.wm.WindowManagerService.performLayoutAndPlaceSurfacesLocked:8222 com.android.server.wm.WindowManagerService.access$300:157 
+10-15 10:17:29.607   353   367 D WindowManager: Input focus has changed to Window{b2ea2bd0 u0 com.android.launcher/com.android.launcher2.Launcher}mToken: AppWindowToken{b2f18078 token=Token{b2f45878 ActivityRecord{b2f45600 u0 com.android.launcher/com.android.launcher2.Launcher t1}}}mAppToken: null
+10-15 10:17:29.607   353   367 V WindowManager: mDisplayContents size: 1
+10-15 10:17:29.607   353   367 V WindowManager: displayContent: com.android.server.wm.DisplayContent@b2e5fa30
+10-15 10:17:29.607   353   367 I WindowManager: >>> OPEN TRANSACTION performLayoutAndPlaceSurfaces
+10-15 10:17:29.607   353   367 V WindowManager: Win #4 Window{b2f41d40 u0 StatusBar}mToken: WindowToken{b2e83a30 null}mAppToken: null: isOnScreen=true mDrawState=4
+10-15 10:17:29.607   353   367 V WindowManager: Win #3 Window{b2f56ce0 u0 Keyguard EXITING}: isOnScreen=true mDrawState=4
+10-15 10:17:29.607   353   367 V WindowManager: Found wallpaper target: #3=Window{b2f56ce0 u0 Keyguard EXITING}
+10-15 10:17:29.607   353   367 V WindowManager: Win Window{b2f56ce0 u0 Keyguard EXITING}: token animating, looking behind.
+10-15 10:17:29.607   353   367 V WindowManager: Win #2 Window{b2ef2c48 u0 KeyguardScrim}mToken: WindowToken{b2e83a30 null}mAppToken: null: isOnScreen=false mDrawState=0
+10-15 10:17:29.607   353   367 V WindowManager: Win #0 Window{b2ea2bd0 u0 com.android.launcher/com.android.launcher2.Launcher}mToken: AppWindowToken{b2f18078 token=Token{b2f45878 ActivityRecord{b2f45600 u0 com.android.launcher/com.android.launcher2.Launcher t1}}}mAppToken: null: isOnScreen=true mDrawState=4
+10-15 10:17:29.607   353   367 I WindowManager: dispatchWallpaperVisibility: 
+10-15 10:17:29.607   353   367 I WindowManager: java.lang.RuntimeException: WindowManager
+10-15 10:17:29.607   353   367 I WindowManager: 	at com.android.server.wm.WindowManagerService.dispatchWallpaperVisibility(WindowManagerService.java:2120)
+10-15 10:17:29.607   353   367 I WindowManager: 	at com.android.server.wm.WindowManagerService.adjustWallpaperWindowsLocked(WindowManagerService.java:1887)
+10-15 10:17:29.607   353   367 I WindowManager: 	at com.android.server.wm.WindowManagerService.performLayoutAndPlaceSurfacesLockedInner(WindowManagerService.java:9088)
+10-15 10:17:29.607   353   367 I WindowManager: 	at com.android.server.wm.WindowManagerService.performLayoutAndPlaceSurfacesLockedLoop(WindowManagerService.java:8280)
+10-15 10:17:29.607   353   367 I WindowManager: 	at com.android.server.wm.WindowManagerService.performLayoutAndPlaceSurfacesLocked(WindowManagerService.java:8222)
+10-15 10:17:29.607   353   367 I WindowManager: 	at com.android.server.wm.WindowManagerService.access$300(WindowManagerService.java:157)
+10-15 10:17:29.607   353   367 I WindowManager: 	at com.android.server.wm.WindowManagerService$H.handleMessage(WindowManagerService.java:7241)
+10-15 10:17:29.607   353   367 I WindowManager: 	at android.os.Handler.dispatchMessage(Handler.java:102)
+10-15 10:17:29.607   353   367 I WindowManager: 	at android.os.Looper.loop(Looper.java:136)
+10-15 10:17:29.607   353   367 I WindowManager: 	at android.os.HandlerThread.run(HandlerThread.java:61)
+10-15 10:17:29.607   353   367 V WindowManager: Found wallpaper target: #0=Window{b2ea2bd0 u0 com.android.launcher/com.android.launcher2.Launcher}mToken: AppWindowToken{b2f18078 token=Token{b2f45878 ActivityRecord{b2f45600 u0 com.android.launcher/com.android.launcher2.Launcher t1}}}mAppToken: null
+10-15 10:17:29.607   353   367 V WindowManager: New wallpaper target: Window{b2ea2bd0 u0 com.android.launcher/com.android.launcher2.Launcher}mToken: AppWindowToken{b2f18078 token=Token{b2f45878 ActivityRecord{b2f45600 u0 com.android.launcher/com.android.launcher2.Launcher t1}}}mAppToken: null oldTarget: Window{b2f56ce0 u0 Keyguard EXITING}
+10-15 10:17:29.607   353   367 V WindowManager: New animation: true old animation: true
+10-15 10:17:29.607   353   367 V WindowManager: New i: 0 old i: 3
+10-15 10:17:29.607   353   367 V WindowManager: Animating wallpapers: old#3=Window{b2f56ce0 u0 Keyguard EXITING}; new#0=Window{b2ea2bd0 u0 com.android.launcher/com.android.launcher2.Launcher}mToken: AppWindowToken{b2f18078 token=Token{b2f45878 ActivityRecord{b2f45600 u0 com.android.launcher/com.android.launcher2.Launcher t1}}}mAppToken: null
+10-15 10:17:29.607   353   367 V WindowManager: Found target below old target.
+10-15 10:17:29.607   353   367 V WindowManager: Wallpaper vis: target Window{b2ea2bd0 u0 com.android.launcher/com.android.launcher2.Launcher}mToken: AppWindowToken{b2f18078 token=Token{b2f45878 ActivityRecord{b2f45600 u0 com.android.launcher/com.android.launcher2.Launcher t1}}}mAppToken: null, obscured=true anim=null upper=Window{b2f56ce0 u0 Keyguard EXITING} lower=Window{b2ea2bd0 u0 com.android.launcher/com.android.launcher2.Launcher}mToken: AppWindowToken{b2f18078 token=Token{b2f45878 ActivityRecord{b2f45600 u0 com.android.launcher/com.android.launcher2.Launcher t1}}}mAppToken: null
+10-15 10:17:29.607   353   367 V WindowManager: Wallpaper visibility: true
+10-15 10:17:29.607   353   367 V WindowManager: adjustWallpaper win Window{b2f6c158 u0 com.example.android.livecubes.cube1.CubeWallpaper1}mToken: WindowToken{b2ed8170 android.os.Binder@b2f4bbc8}mAppToken: null anim layer: 21005
+10-15 10:17:29.607   353   367 V WindowManager: Wallpaper removing at 1: Window{b2f6c158 u0 com.example.android.livecubes.cube1.CubeWallpaper1}mToken: WindowToken{b2ed8170 android.os.Binder@b2f4bbc8}mAppToken: null
+10-15 10:17:29.607   353   367 V WindowManager: Moving wallpaper Window{b2f6c158 u0 com.example.android.livecubes.cube1.CubeWallpaper1}mToken: WindowToken{b2ed8170 android.os.Binder@b2f4bbc8}mAppToken: null from 1 to 0
+10-15 10:17:29.607   353   367 D WindowManager: New wallpaper: target=Window{b2ea2bd0 u0 com.android.launcher/com.android.launcher2.Launcher}mToken: AppWindowToken{b2f18078 token=Token{b2f45878 ActivityRecord{b2f45600 u0 com.android.launcher/com.android.launcher2.Launcher t1}}}mAppToken: null lower=Window{b2ea2bd0 u0 com.android.launcher/com.android.launcher2.Launcher}mToken: AppWindowToken{b2f18078 token=Token{b2f45878 ActivityRecord{b2f45600 u0 com.android.launcher/com.android.launcher2.Launcher t1}}}mAppToken: null upper=Window{b2f56ce0 u0 Keyguard EXITING}
+10-15 10:17:29.627   353   367 V WindowManager: 
+10-15 10:17:29.627   353   367 V WindowManager: 
+10-15 10:17:29.627   353   367 V WindowManager: performLayoutLockedInner
+10-15 10:17:29.627   353   367 V WindowManager: WindowState: Window{b2f41d40 u0 StatusBar}mToken: WindowToken{b2e83a30 null}mAppToken: null
+10-15 10:17:29.637   353   367 V WindowManager: WindowState: Window{b2f56ce0 u0 Keyguard EXITING}
+10-15 10:17:29.637   353   367 V WindowManager: WindowState: Window{b2ef2c48 u0 KeyguardScrim}mToken: WindowToken{b2e83a30 null}mAppToken: null
+10-15 10:17:29.637   353   367 V WindowManager: WindowState: Window{b2ea2bd0 u0 com.android.launcher/com.android.launcher2.Launcher}mToken: AppWindowToken{b2f18078 token=Token{b2f45878 ActivityRecord{b2f45600 u0 com.android.launcher/com.android.launcher2.Launcher t1}}}mAppToken: null
+10-15 10:17:29.637   353   367 V WindowManager: WindowState: Window{b2f6c158 u0 com.example.android.livecubes.cube1.CubeWallpaper1}mToken: WindowToken{b2ed8170 android.os.Binder@b2f4bbc8}mAppToken: null
+10-15 10:17:29.637   353   367 V WindowManager: -------------------------------------
+10-15 10:17:29.637   353   367 V WindowManager: performLayout: needed=false dw=320 dh=480
+10-15 10:17:29.637   353   367 I WindowManager: mDock rect: (0,0 - 320,480)
+10-15 10:17:29.637   353   367 V WindowManager: Status bar: dock=[0,25][320,480] content=[0,25][320,480] cur=[0,25][320,480]
+10-15 10:17:29.637   353   367 V WindowManager: 1ST PASS Window{b2f41d40 u0 StatusBar}mToken: WindowToken{b2e83a30 null}mAppToken: null: gone=false mHaveFrame=true mLayoutAttached=false screen changed=false
+10-15 10:17:29.637   353   367 V WindowManager:   VIS: mViewVisibility=0 mRelayoutCalled=true hidden=false hiddenRequested=false mAttachedHidden=false
+10-15 10:17:29.637   353   367 V WindowManager:   LAYOUT: mFrame=Rect(0, 0 - 320, 25) mContainingFrame=Rect(0, 0 - 320, 480) mDisplayFrame=Rect(0, 0 - 320, 480)
+10-15 10:17:29.637   353   367 V WindowManager: 1ST PASS Window{b2f56ce0 u0 Keyguard EXITING}: gone=true mHaveFrame=true mLayoutAttached=false screen changed=false
+10-15 10:17:29.637   353   367 V WindowManager:   GONE: mViewVisibility=8 mRelayoutCalled=true hidden=false hiddenRequested=false mAttachedHidden=false
+10-15 10:17:29.637   353   367 V WindowManager: 1ST PASS Window{b2ef2c48 u0 KeyguardScrim}mToken: WindowToken{b2e83a30 null}mAppToken: null: gone=true mHaveFrame=true mLayoutAttached=false screen changed=true
+10-15 10:17:29.637   353   367 V WindowManager:   GONE: mViewVisibility=8 mRelayoutCalled=true hidden=false hiddenRequested=false mAttachedHidden=false
+10-15 10:17:29.637   353   367 V WindowManager: 1ST PASS Window{b2ea2bd0 u0 com.android.launcher/com.android.launcher2.Launcher}mToken: AppWindowToken{b2f18078 token=Token{b2f45878 ActivityRecord{b2f45600 u0 com.android.launcher/com.android.launcher2.Launcher t1}}}mAppToken: null: gone=false mHaveFrame=true mLayoutAttached=false screen changed=false
+10-15 10:17:29.637   353   367 V WindowManager:   VIS: mViewVisibility=0 mRelayoutCalled=true hidden=false hiddenRequested=false mAttachedHidden=false
+10-15 10:17:29.637   353   367 V WindowManager: layoutWindowLw(com.android.launcher/com.android.launcher2.Launcher): IN_SCREEN, INSET_DECOR
+10-15 10:17:29.637   353   367 V WindowManager: Compute frame com.android.launcher/com.android.launcher2.Launcher: sim=#20 attach=null type=1 flags=0x01910100 pf=[0,0][320,480] df=[0,0][320,480] of=[0,0][320,480] cf=[0,25][320,480] vf=[0,25][320,480] dcf=[0,25][320,480]
+10-15 10:17:29.637   353   367 V WindowManager:   LAYOUT: mFrame=Rect(0, 0 - 320, 480) mContainingFrame=Rect(0, 0 - 320, 480) mDisplayFrame=Rect(0, 0 - 320, 480)
+10-15 10:17:29.637   353   367 V WindowManager: 1ST PASS Window{b2f6c158 u0 com.example.android.livecubes.cube1.CubeWallpaper1}mToken: WindowToken{b2ed8170 android.os.Binder@b2f4bbc8}mAppToken: null: gone=false mHaveFrame=true mLayoutAttached=false screen changed=false
+10-15 10:17:29.637   353   367 V WindowManager:   VIS: mViewVisibility=0 mRelayoutCalled=true hidden=false hiddenRequested=false mAttachedHidden=false
+10-15 10:17:29.637   353   367 V WindowManager: layoutWindowLw(com.example.android.livecubes.cube1.CubeWallpaper1): IN_SCREEN
+10-15 10:17:29.637   353   367 V WindowManager: Compute frame com.example.android.livecubes.cube1.CubeWallpaper1: sim=#0 attach=null type=2013 flags=0x00000308 pf=[0,0][320,480] df=[-10000,-10000][10000,10000] of=[-10000,-10000][10000,10000] cf=[-10000,-10000][10000,10000] vf=[-10000,-10000][10000,10000] dcf=[0,0][320,480]
+10-15 10:17:29.637   353   367 V WindowManager:   LAYOUT: mFrame=Rect(0, 0 - 320, 480) mContainingFrame=Rect(0, 0 - 320, 480) mDisplayFrame=Rect(-10000, -10000 - 10000, 10000)
+10-15 10:17:29.637   353   367 I WindowManager: Win Window{b2f41d40 u0 StatusBar}mToken: WindowToken{b2e83a30 null}mAppToken: null: isVisibleOrBehindKeyguardLw=true
+10-15 10:17:29.637   353   367 I WindowManager: Win Window{b2f56ce0 u0 Keyguard EXITING}: isVisibleOrBehindKeyguardLw=false
+10-15 10:17:29.637   353   367 I WindowManager: Win Window{b2ea2bd0 u0 com.android.launcher/com.android.launcher2.Launcher}mToken: AppWindowToken{b2f18078 token=Token{b2f45878 ActivityRecord{b2f45600 u0 com.android.launcher/com.android.launcher2.Launcher t1}}}mAppToken: null: isVisibleOrBehindKeyguardLw=true
+10-15 10:17:29.637   353   367 V WindowManager: Fullscreen window: Window{b2ea2bd0 u0 com.android.launcher/com.android.launcher2.Launcher}mToken: AppWindowToken{b2f18078 token=Token{b2f45878 ActivityRecord{b2f45600 u0 com.android.launcher/com.android.launcher2.Launcher t1}}}mAppToken: null
+10-15 10:17:29.637   353   367 I WindowManager: Win Window{b2f6c158 u0 com.example.android.livecubes.cube1.CubeWallpaper1}mToken: WindowToken{b2ed8170 android.os.Binder@b2f4bbc8}mAppToken: null: isVisibleOrBehindKeyguardLw=true
+10-15 10:17:29.637   353   367 I WindowManager: force=false forcefkg=false top=Window{b2ea2bd0 u0 com.android.launcher/com.android.launcher2.Launcher}mToken: AppWindowToken{b2f18078 token=Token{b2f45878 ActivityRecord{b2f45600 u0 com.android.launcher/com.android.launcher2.Launcher t1}}}mAppToken: null
+10-15 10:17:29.637   353   367 D WindowManager: frame: Rect(0, 0 - 320, 480) shown frame: RectF(0.0, 0.0, 320.0, 480.0)
+10-15 10:17:29.637   353   367 D WindowManager: attr: WM.LayoutParams{(0,0)(fillxfill) sim=#20 ty=1 fl=#1910100 pfl=0x8 fmt=-2 wanim=0x10302a1 vsysui=0x400} lp.flags=0x1910100
+10-15 10:17:29.637   353   367 V WindowManager: ** SHOWING status bar: top is not fullscreen
+10-15 10:17:29.637   353   367 V WindowManager: finishPostLayoutPolicyLw: mHideKeyguard=false
+10-15 10:17:29.647   353   367 I WindowManager: dispatchWallpaperVisibility: 
+10-15 10:17:29.647   353   367 I WindowManager: java.lang.RuntimeException: WindowManager
+10-15 10:17:29.647   353   367 I WindowManager: 	at com.android.server.wm.WindowManagerService.dispatchWallpaperVisibility(WindowManagerService.java:2120)
+10-15 10:17:29.647   353   367 I WindowManager: 	at com.android.server.wm.WindowManagerService.updateWallpaperVisibilityLocked(WindowManagerService.java:2160)
+10-15 10:17:29.647   353   367 I WindowManager: 	at com.android.server.wm.WindowManagerService.performLayoutAndPlaceSurfacesLockedInner(WindowManagerService.java:9167)
+10-15 10:17:29.647   353   367 I WindowManager: 	at com.android.server.wm.WindowManagerService.performLayoutAndPlaceSurfacesLockedLoop(WindowManagerService.java:8280)
+10-15 10:17:29.647   353   367 I WindowManager: 	at com.android.server.wm.WindowManagerService.performLayoutAndPlaceSurfacesLocked(WindowManagerService.java:8222)
+10-15 10:17:29.647   353   367 I WindowManager: 	at com.android.server.wm.WindowManagerService.access$300(WindowManagerService.java:157)
+10-15 10:17:29.647   353   367 I WindowManager: 	at com.android.server.wm.WindowManagerService$H.handleMessage(WindowManagerService.java:7241)
+10-15 10:17:29.647   353   367 I WindowManager: 	at android.os.Handler.dispatchMessage(Handler.java:102)
+10-15 10:17:29.647   353   367 I WindowManager: 	at android.os.Looper.loop(Looper.java:136)
+10-15 10:17:29.647   353   367 I WindowManager: 	at android.os.HandlerThread.run(HandlerThread.java:61)
+10-15 10:17:29.647   353   367 V WindowManager: Resizing Window{b2f41d40 u0 StatusBar}mToken: WindowToken{b2e83a30 null}mAppToken: null: configChanged=false last=Rect(0, 0 - 320, 25) frame=Rect(0, 0 - 320, 25)
+10-15 10:17:29.647   353   367 V WindowManager: Wallpaper vis: target Window{b2ea2bd0 u0 com.android.launcher/com.android.launcher2.Launcher}mToken: AppWindowToken{b2f18078 token=Token{b2f45878 ActivityRecord{b2f45600 u0 com.android.launcher/com.android.launcher2.Launcher t1}}}mAppToken: null, obscured=false anim=null upper=Window{b2f56ce0 u0 Keyguard EXITING} lower=Window{b2ea2bd0 u0 com.android.launcher/com.android.launcher2.Launcher}mToken: AppWindowToken{b2f18078 token=Token{b2f45878 ActivityRecord{b2f45600 u0 com.android.launcher/com.android.launcher2.Launcher t1}}}mAppToken: null
+10-15 10:17:29.647   353   367 I WindowManager:   SURFACE CROP [0,25][320,480]: Window{b2ea2bd0 u0 com.android.launcher/com.android.launcher2.Launcher}mToken: AppWindowToken{b2f18078 token=Token{b2f45878 ActivityRecord{b2f45600 u0 com.android.launcher/com.android.launcher2.Launcher t1}}}mAppToken: null
+10-15 10:17:29.647   353   367 V WindowManager: Resizing Window{b2ea2bd0 u0 com.android.launcher/com.android.launcher2.Launcher}mToken: AppWindowToken{b2f18078 token=Token{b2f45878 ActivityRecord{b2f45600 u0 com.android.launcher/com.android.launcher2.Launcher t1}}}mAppToken: null: configChanged=false last=Rect(0, 0 - 320, 480) frame=Rect(0, 0 - 320, 480)
+10-15 10:17:29.647   353   367 V WindowManager: Resizing Window{b2f6c158 u0 com.example.android.livecubes.cube1.CubeWallpaper1}mToken: WindowToken{b2ed8170 android.os.Binder@b2f4bbc8}mAppToken: null: configChanged=false last=Rect(0, 0 - 320, 480) frame=Rect(0, 0 - 320, 480)
+10-15 10:17:29.647   353   367 I WindowManager: <<< CLOSE TRANSACTION performLayoutAndPlaceSurfaces
+10-15 10:17:29.667   353   367 I WindowManager: >>> OPEN TRANSACTION setFocusedStackFrame
+10-15 10:17:29.667   353   367 I WindowManager: >>> CLOSE TRANSACTION setFocusedStackFrame
+10-15 10:17:29.687   353   367 I WindowManager: enableScreenIfNeededLocked: mDisplayEnabled=true mForceDisplayEnabled=false mShowingBootMessages=false mSystemBooted=true
+10-15 10:17:29.687   353   367 I WindowManager: java.lang.RuntimeException: here
+10-15 10:17:29.687   353   367 I WindowManager: 	at com.android.server.wm.WindowManagerService.enableScreenIfNeededLocked(WindowManagerService.java:5343)
+10-15 10:17:29.687   353   367 I WindowManager: 	at com.android.server.wm.WindowManagerService.performLayoutAndPlaceSurfacesLockedInner(WindowManagerService.java:9585)
+10-15 10:17:29.687   353   367 I WindowManager: 	at com.android.server.wm.WindowManagerService.performLayoutAndPlaceSurfacesLockedLoop(WindowManagerService.java:8280)
+10-15 10:17:29.687   353   367 I WindowManager: 	at com.android.server.wm.WindowManagerService.performLayoutAndPlaceSurfacesLocked(WindowManagerService.java:8222)
+10-15 10:17:29.687   353   367 I WindowManager: 	at com.android.server.wm.WindowManagerService.access$300(WindowManagerService.java:157)
+10-15 10:17:29.687   353   367 I WindowManager: 	at com.android.server.wm.WindowManagerService$H.handleMessage(WindowManagerService.java:7241)
+10-15 10:17:29.687   353   367 I WindowManager: 	at android.os.Handler.dispatchMessage(Handler.java:102)
+10-15 10:17:29.687   353   367 I WindowManager: 	at android.os.Looper.loop(Looper.java:136)
+10-15 10:17:29.687   353   367 I WindowManager: 	at android.os.HandlerThread.run(HandlerThread.java:61)
+10-15 10:17:29.687   353   367 E WindowManager: performLayoutAndPlaceSurfacesLockedInner exit: animating=true
+10-15 10:17:29.687   353   367 V WindowManager: 
+10-15 10:17:29.687   353   367 V WindowManager: 
+10-15 10:17:29.687   353   367 V WindowManager: performLayoutAndPlaceSurfacesLockedInner: entry. Called by com.android.server.wm.WindowManagerService.performLayoutAndPlaceSurfacesLockedLoop:8280 com.android.server.wm.WindowManagerService.performLayoutAndPlaceSurfacesLocked:8222 com.android.server.wm.WindowManagerService.access$300:157 
+10-15 10:17:29.687   353   367 V WindowManager: mDisplayContents size: 1
+10-15 10:17:29.687   353   367 V WindowManager: displayContent: com.android.server.wm.DisplayContent@b2e5fa30
+10-15 10:17:29.687   353   367 I WindowManager: >>> OPEN TRANSACTION performLayoutAndPlaceSurfaces
+10-15 10:17:29.687   353   367 V WindowManager: 
+10-15 10:17:29.687   353   367 V WindowManager: 
+10-15 10:17:29.687   353   367 V WindowManager: performLayoutLockedInner
+10-15 10:17:29.687   353   367 V WindowManager: WindowState: Window{b2f41d40 u0 StatusBar}mToken: WindowToken{b2e83a30 null}mAppToken: null
+10-15 10:17:29.687   353   367 V WindowManager: WindowState: Window{b2f56ce0 u0 Keyguard EXITING}
+10-15 10:17:29.687   353   367 V WindowManager: WindowState: Window{b2ef2c48 u0 KeyguardScrim}mToken: WindowToken{b2e83a30 null}mAppToken: null
+10-15 10:17:29.687   353   367 V WindowManager: WindowState: Window{b2ea2bd0 u0 com.android.launcher/com.android.launcher2.Launcher}mToken: AppWindowToken{b2f18078 token=Token{b2f45878 ActivityRecord{b2f45600 u0 com.android.launcher/com.android.launcher2.Launcher t1}}}mAppToken: null
+10-15 10:17:29.687   353   367 V WindowManager: WindowState: Window{b2f6c158 u0 com.example.android.livecubes.cube1.CubeWallpaper1}mToken: WindowToken{b2ed8170 android.os.Binder@b2f4bbc8}mAppToken: null
+10-15 10:17:29.687   353   367 V WindowManager: -------------------------------------
+10-15 10:17:29.697   353   367 V WindowManager: performLayout: needed=false dw=320 dh=480
+10-15 10:17:29.697   353   367 I WindowManager: mDock rect: (0,0 - 320,480)
+10-15 10:17:29.697   353   367 V WindowManager: Status bar: dock=[0,25][320,480] content=[0,25][320,480] cur=[0,25][320,480]
+10-15 10:17:29.697   353   367 V WindowManager: 1ST PASS Window{b2f41d40 u0 StatusBar}mToken: WindowToken{b2e83a30 null}mAppToken: null: gone=false mHaveFrame=true mLayoutAttached=false screen changed=false
+10-15 10:17:29.697   353   367 V WindowManager:   VIS: mViewVisibility=0 mRelayoutCalled=true hidden=false hiddenRequested=false mAttachedHidden=false
+10-15 10:17:29.697   353   367 V WindowManager:   LAYOUT: mFrame=Rect(0, 0 - 320, 25) mContainingFrame=Rect(0, 0 - 320, 480) mDisplayFrame=Rect(0, 0 - 320, 480)
+10-15 10:17:29.697   353   367 V WindowManager: 1ST PASS Window{b2f56ce0 u0 Keyguard EXITING}: gone=true mHaveFrame=true mLayoutAttached=false screen changed=false
+10-15 10:17:29.697   353   367 V WindowManager:   GONE: mViewVisibility=8 mRelayoutCalled=true hidden=false hiddenRequested=false mAttachedHidden=false
+10-15 10:17:29.697   353   367 V WindowManager: 1ST PASS Window{b2ef2c48 u0 KeyguardScrim}mToken: WindowToken{b2e83a30 null}mAppToken: null: gone=true mHaveFrame=true mLayoutAttached=false screen changed=true
+10-15 10:17:29.697   353   367 V WindowManager:   GONE: mViewVisibility=8 mRelayoutCalled=true hidden=false hiddenRequested=false mAttachedHidden=false
+10-15 10:17:29.697   353   367 V WindowManager: 1ST PASS Window{b2ea2bd0 u0 com.android.launcher/com.android.launcher2.Launcher}mToken: AppWindowToken{b2f18078 token=Token{b2f45878 ActivityRecord{b2f45600 u0 com.android.launcher/com.android.launcher2.Launcher t1}}}mAppToken: null: gone=false mHaveFrame=true mLayoutAttached=false screen changed=false
+10-15 10:17:29.697   353   367 V WindowManager:   VIS: mViewVisibility=0 mRelayoutCalled=true hidden=false hiddenRequested=false mAttachedHidden=false
+10-15 10:17:29.697   353   367 V WindowManager: layoutWindowLw(com.android.launcher/com.android.launcher2.Launcher): IN_SCREEN, INSET_DECOR
+10-15 10:17:29.697   353   367 V WindowManager: Compute frame com.android.launcher/com.android.launcher2.Launcher: sim=#20 attach=null type=1 flags=0x01910100 pf=[0,0][320,480] df=[0,0][320,480] of=[0,0][320,480] cf=[0,25][320,480] vf=[0,25][320,480] dcf=[0,25][320,480]
+10-15 10:17:29.697   353   367 V WindowManager:   LAYOUT: mFrame=Rect(0, 0 - 320, 480) mContainingFrame=Rect(0, 0 - 320, 480) mDisplayFrame=Rect(0, 0 - 320, 480)
+10-15 10:17:29.697   353   367 V WindowManager: 1ST PASS Window{b2f6c158 u0 com.example.android.livecubes.cube1.CubeWallpaper1}mToken: WindowToken{b2ed8170 android.os.Binder@b2f4bbc8}mAppToken: null: gone=false mHaveFrame=true mLayoutAttached=false screen changed=false
+10-15 10:17:29.697   353   367 V WindowManager:   VIS: mViewVisibility=0 mRelayoutCalled=true hidden=false hiddenRequested=false mAttachedHidden=false
+10-15 10:17:29.697   353   367 V WindowManager: layoutWindowLw(com.example.android.livecubes.cube1.CubeWallpaper1): IN_SCREEN
+10-15 10:17:29.697   353   367 V WindowManager: Compute frame com.example.android.livecubes.cube1.CubeWallpaper1: sim=#0 attach=null type=2013 flags=0x00000308 pf=[0,0][320,480] df=[-10000,-10000][10000,10000] of=[-10000,-10000][10000,10000] cf=[-10000,-10000][10000,10000] vf=[-10000,-10000][10000,10000] dcf=[0,0][320,480]
+10-15 10:17:29.697   353   367 V WindowManager:   LAYOUT: mFrame=Rect(0, 0 - 320, 480) mContainingFrame=Rect(0, 0 - 320, 480) mDisplayFrame=Rect(-10000, -10000 - 10000, 10000)
+10-15 10:17:29.697   353   367 I WindowManager: Win Window{b2f41d40 u0 StatusBar}mToken: WindowToken{b2e83a30 null}mAppToken: null: isVisibleOrBehindKeyguardLw=true
+10-15 10:17:29.697   353   367 I WindowManager: Win Window{b2f56ce0 u0 Keyguard EXITING}: isVisibleOrBehindKeyguardLw=false
+10-15 10:17:29.697   353   367 I WindowManager: Win Window{b2ea2bd0 u0 com.android.launcher/com.android.launcher2.Launcher}mToken: AppWindowToken{b2f18078 token=Token{b2f45878 ActivityRecord{b2f45600 u0 com.android.launcher/com.android.launcher2.Launcher t1}}}mAppToken: null: isVisibleOrBehindKeyguardLw=true
+10-15 10:17:29.697   353   367 V WindowManager: Fullscreen window: Window{b2ea2bd0 u0 com.android.launcher/com.android.launcher2.Launcher}mToken: AppWindowToken{b2f18078 token=Token{b2f45878 ActivityRecord{b2f45600 u0 com.android.launcher/com.android.launcher2.Launcher t1}}}mAppToken: null
+10-15 10:17:29.697   353   367 I WindowManager: Win Window{b2f6c158 u0 com.example.android.livecubes.cube1.CubeWallpaper1}mToken: WindowToken{b2ed8170 android.os.Binder@b2f4bbc8}mAppToken: null: isVisibleOrBehindKeyguardLw=true
+10-15 10:17:29.697   353   367 I WindowManager: force=false forcefkg=false top=Window{b2ea2bd0 u0 com.android.launcher/com.android.launcher2.Launcher}mToken: AppWindowToken{b2f18078 token=Token{b2f45878 ActivityRecord{b2f45600 u0 com.android.launcher/com.android.launcher2.Launcher t1}}}mAppToken: null
+10-15 10:17:29.697   353   367 D WindowManager: frame: Rect(0, 0 - 320, 480) shown frame: RectF(0.0, 0.0, 320.0, 480.0)
+10-15 10:17:29.697   353   367 D WindowManager: attr: WM.LayoutParams{(0,0)(fillxfill) sim=#20 ty=1 fl=#1910100 pfl=0x8 fmt=-2 wanim=0x10302a1 vsysui=0x400} lp.flags=0x1910100
+10-15 10:17:29.697   353   367 V WindowManager: ** SHOWING status bar: top is not fullscreen
+10-15 10:17:29.697   353   367 V WindowManager: finishPostLayoutPolicyLw: mHideKeyguard=false
+10-15 10:17:29.697   353   367 V WindowManager: Resizing Window{b2f41d40 u0 StatusBar}mToken: WindowToken{b2e83a30 null}mAppToken: null: configChanged=false last=Rect(0, 0 - 320, 25) frame=Rect(0, 0 - 320, 25)
+10-15 10:17:29.717   353   367 V WindowManager: Resizing Window{b2ea2bd0 u0 com.android.launcher/com.android.launcher2.Launcher}mToken: AppWindowToken{b2f18078 token=Token{b2f45878 ActivityRecord{b2f45600 u0 com.android.launcher/com.android.launcher2.Launcher t1}}}mAppToken: null: configChanged=false last=Rect(0, 0 - 320, 480) frame=Rect(0, 0 - 320, 480)
+10-15 10:17:29.717   353   367 V WindowManager: Resizing Window{b2f6c158 u0 com.example.android.livecubes.cube1.CubeWallpaper1}mToken: WindowToken{b2ed8170 android.os.Binder@b2f4bbc8}mAppToken: null: configChanged=false last=Rect(0, 0 - 320, 480) frame=Rect(0, 0 - 320, 480)
+10-15 10:17:29.717   353   367 I WindowManager: <<< CLOSE TRANSACTION performLayoutAndPlaceSurfaces
+10-15 10:17:29.717   353   367 I WindowManager: >>> OPEN TRANSACTION setFocusedStackFrame
+10-15 10:17:29.717   353   367 I WindowManager: >>> CLOSE TRANSACTION setFocusedStackFrame
+10-15 10:17:29.717   353   367 I WindowManager: enableScreenIfNeededLocked: mDisplayEnabled=true mForceDisplayEnabled=false mShowingBootMessages=false mSystemBooted=true
+10-15 10:17:29.717   353   367 I WindowManager: java.lang.RuntimeException: here
+10-15 10:17:29.717   353   367 I WindowManager: 	at com.android.server.wm.WindowManagerService.enableScreenIfNeededLocked(WindowManagerService.java:5343)
+10-15 10:17:29.717   353   367 I WindowManager: 	at com.android.server.wm.WindowManagerService.performLayoutAndPlaceSurfacesLockedInner(WindowManagerService.java:9585)
+10-15 10:17:29.717   353   367 I WindowManager: 	at com.android.server.wm.WindowManagerService.performLayoutAndPlaceSurfacesLockedLoop(WindowManagerService.java:8280)
+10-15 10:17:29.717   353   367 I WindowManager: 	at com.android.server.wm.WindowManagerService.performLayoutAndPlaceSurfacesLocked(WindowManagerService.java:8222)
+10-15 10:17:29.717   353   367 I WindowManager: 	at com.android.server.wm.WindowManagerService.access$300(WindowManagerService.java:157)
+10-15 10:17:29.717   353   367 I WindowManager: 	at com.android.server.wm.WindowManagerService$H.handleMessage(WindowManagerService.java:7241)
+10-15 10:17:29.717   353   367 I WindowManager: 	at android.os.Handler.dispatchMessage(Handler.java:102)
+10-15 10:17:29.717   353   367 I WindowManager: 	at android.os.Looper.loop(Looper.java:136)
+10-15 10:17:29.717   353   367 I WindowManager: 	at android.os.HandlerThread.run(HandlerThread.java:61)
+10-15 10:17:29.717   353   367 E WindowManager: performLayoutAndPlaceSurfacesLockedInner exit: animating=true
+10-15 10:17:29.717   353   367 V WindowManager: handleMessage: exit
+10-15 10:17:29.717   353   367 I WindowManager:   SURFACE alpha=1.0 layer=21000 matrix=[1.0,0.0][0.0,1.0]: Window{b2f6c158 u0 com.example.android.livecubes.cube1.CubeWallpaper1}mToken: WindowToken{b2ed8170 android.os.Binder@b2f4bbc8}mAppToken: null
+10-15 10:17:29.717   353   367 I WindowManager:   SURFACE alpha=0.0 layer=21005 matrix=[1.0,0.0][0.0,1.0]: Window{b2ea2bd0 u0 com.android.launcher/com.android.launcher2.Launcher}mToken: AppWindowToken{b2f18078 token=Token{b2f45878 ActivityRecord{b2f45600 u0 com.android.launcher/com.android.launcher2.Launcher t1}}}mAppToken: null
+10-15 10:17:29.717   353   367 I WindowManager:   SURFACE POS -11.131012, -16.696533: Window{b2f56ce0 u0 Keyguard EXITING}
+10-15 10:17:29.727   353   367 I WindowManager:   SURFACE alpha=0.1351 layer=131000 matrix=[1.0695689,0.0][0.0,1.0695689]: Window{b2f56ce0 u0 Keyguard EXITING}
+10-15 10:17:29.727   353   367 V WindowManager: Setting FocusedStackFrame to layer=21006
+10-15 10:17:29.747   353   367 V WindowManager: handleMessage: entry what=2
+10-15 10:17:29.747   353   367 I WindowManager: Focus moving from null to Window{b2ea2bd0 u0 com.android.launcher/com.android.launcher2.Launcher}mToken: AppWindowToken{b2f18078 token=Token{b2f45878 ActivityRecord{b2f45600 u0 com.android.launcher/com.android.launcher2.Launcher t1}}}mAppToken: null
+10-15 10:17:29.757   353   367 I WindowManager: Gaining focus: Window{b2ea2bd0 u0 com.android.launcher/com.android.launcher2.Launcher}mToken: AppWindowToken{b2f18078 token=Token{b2f45878 ActivityRecord{b2f45600 u0 com.android.launcher/com.android.launcher2.Launcher t1}}}mAppToken: null
+10-15 10:17:29.787   353   367 V WindowManager: handleMessage: exit
+10-15 10:17:29.847   353   367 I WindowManager:   SURFACE alpha=0.2256 layer=21005 matrix=[1.0,0.0][0.0,1.0]: Window{b2ea2bd0 u0 com.android.launcher/com.android.launcher2.Launcher}mToken: AppWindowToken{b2f18078 token=Token{b2f45878 ActivityRecord{b2f45600 u0 com.android.launcher/com.android.launcher2.Launcher t1}}}mAppToken: null
+10-15 10:17:29.847   353   367 I WindowManager:   SURFACE POS -16.0, -24.0: Window{b2f56ce0 u0 Keyguard EXITING}
+10-15 10:17:29.847   353   367 I WindowManager:   SURFACE alpha=0.0 layer=131000 matrix=[1.1,0.0][0.0,1.1]: Window{b2f56ce0 u0 Keyguard EXITING}
+10-15 10:17:30.007   353   367 V WindowManager: Setting FocusedStackFrame to layer=21006
+10-15 10:17:30.017   353   367 I WindowManager:   SURFACE HIDE (finishExit): Window{b2f56ce0 u0 Keyguard EXITING}
+10-15 10:17:30.017   353   367 I WindowManager:   SURFACE HIDE (performLayout): Window{b2f56ce0 u0 Keyguard EXITING}
+10-15 10:17:30.017   353   367 I WindowManager:   SURFACE alpha=1.0 layer=21005 matrix=[1.0,0.0][0.0,1.0]: Window{b2ea2bd0 u0 com.android.launcher/com.android.launcher2.Launcher}mToken: AppWindowToken{b2f18078 token=Token{b2f45878 ActivityRecord{b2f45600 u0 com.android.launcher/com.android.launcher2.Launcher t1}}}mAppToken: null
+10-15 10:17:30.037   353   367 I WindowManager:   SURFACE POS 0.0, 0.0: Window{b2f56ce0 u0 Keyguard}mToken: WindowToken{b2e83a30 null}mAppToken: null
+10-15 10:17:30.047   353   367 V WindowManager: Setting FocusedStackFrame to layer=21006
+10-15 10:17:30.047   353   367 V WindowManager: Update reported visibility: AppWindowToken{b2f18078 token=Token{b2f45878 ActivityRecord{b2f45600 u0 com.android.launcher/com.android.launcher2.Launcher t1}}}
+10-15 10:17:30.047   353   367 V WindowManager: Win Window{b2ea2bd0 u0 com.android.launcher/com.android.launcher2.Launcher}mToken: AppWindowToken{b2f18078 token=Token{b2f45878 ActivityRecord{b2f45600 u0 com.android.launcher/com.android.launcher2.Launcher t1}}}mAppToken: null: isDrawn=true, isAnimating=false
+10-15 10:17:30.047   353   367 V WindowManager: VIS AppWindowToken{b2f18078 token=Token{b2f45878 ActivityRecord{b2f45600 u0 com.android.launcher/com.android.launcher2.Launcher t1}}}: interesting=1 visible=1
+10-15 10:17:30.057   353   367 V WindowManager: Setting FocusedStackFrame to layer=21006
+10-15 10:17:30.057   353   367 V WindowManager: handleMessage: entry what=4
+10-15 10:17:30.057   353   367 V WindowManager: 
+10-15 10:17:30.057   353   367 V WindowManager: 
+10-15 10:17:30.057   353   367 V WindowManager: performLayoutAndPlaceSurfacesLockedInner: entry. Called by com.android.server.wm.WindowManagerService.performLayoutAndPlaceSurfacesLockedLoop:8280 com.android.server.wm.WindowManagerService.performLayoutAndPlaceSurfacesLocked:8222 com.android.server.wm.WindowManagerService.access$300:157 
+10-15 10:17:30.057   353   367 V WindowManager: mDisplayContents size: 1
+10-15 10:17:30.057   353   367 V WindowManager: displayContent: com.android.server.wm.DisplayContent@b2e5fa30
+10-15 10:17:30.057   353   367 I WindowManager: >>> OPEN TRANSACTION performLayoutAndPlaceSurfaces
+10-15 10:17:30.057   353   367 V WindowManager: Win #4 Window{b2f41d40 u0 StatusBar}mToken: WindowToken{b2e83a30 null}mAppToken: null: isOnScreen=true mDrawState=4
+10-15 10:17:30.057   353   367 V WindowManager: Win #3 Window{b2f56ce0 u0 Keyguard}mToken: WindowToken{b2e83a30 null}mAppToken: null: isOnScreen=false mDrawState=4
+10-15 10:17:30.057   353   367 V WindowManager: Win #2 Window{b2ef2c48 u0 KeyguardScrim}mToken: WindowToken{b2e83a30 null}mAppToken: null: isOnScreen=false mDrawState=0
+10-15 10:17:30.057   353   367 V WindowManager: Win #1 Window{b2ea2bd0 u0 com.android.launcher/com.android.launcher2.Launcher}mToken: AppWindowToken{b2f18078 token=Token{b2f45878 ActivityRecord{b2f45600 u0 com.android.launcher/com.android.launcher2.Launcher t1}}}mAppToken: null: isOnScreen=true mDrawState=4
+10-15 10:17:30.057   353   367 V WindowManager: Found wallpaper target: #1=Window{b2ea2bd0 u0 com.android.launcher/com.android.launcher2.Launcher}mToken: AppWindowToken{b2f18078 token=Token{b2f45878 ActivityRecord{b2f45600 u0 com.android.launcher/com.android.launcher2.Launcher t1}}}mAppToken: null
+10-15 10:17:30.057   353   367 V WindowManager: No longer animating wallpaper targets!
+10-15 10:17:30.057   353   367 V WindowManager: Wallpaper vis: target Window{b2ea2bd0 u0 com.android.launcher/com.android.launcher2.Launcher}mToken: AppWindowToken{b2f18078 token=Token{b2f45878 ActivityRecord{b2f45600 u0 com.android.launcher/com.android.launcher2.Launcher t1}}}mAppToken: null, obscured=false anim=null upper=null lower=null
+10-15 10:17:30.057   353   367 V WindowManager: Wallpaper visibility: true
+10-15 10:17:30.077   353   367 I WindowManager: dispatchWallpaperVisibility: 
+10-15 10:17:30.077   353   367 I WindowManager: java.lang.RuntimeException: WindowManager
+10-15 10:17:30.077   353   367 I WindowManager: 	at com.android.server.wm.WindowManagerService.dispatchWallpaperVisibility(WindowManagerService.java:2120)
+10-15 10:17:30.077   353   367 I WindowManager: 	at com.android.server.wm.WindowManagerService.adjustWallpaperWindowsLocked(WindowManagerService.java:1887)
+10-15 10:17:30.077   353   367 I WindowManager: 	at com.android.server.wm.WindowManagerService.performLayoutAndPlaceSurfacesLockedInner(WindowManagerService.java:9088)
+10-15 10:17:30.077   353   367 I WindowManager: 	at com.android.server.wm.WindowManagerService.performLayoutAndPlaceSurfacesLockedLoop(WindowManagerService.java:8280)
+10-15 10:17:30.077   353   367 I WindowManager: 	at com.android.server.wm.WindowManagerService.performLayoutAndPlaceSurfacesLocked(WindowManagerService.java:8222)
+10-15 10:17:30.077   353   367 I WindowManager: 	at com.android.server.wm.WindowManagerService.access$300(WindowManagerService.java:157)
+10-15 10:17:30.077   353   367 I WindowManager: 	at com.android.server.wm.WindowManagerService$H.handleMessage(WindowManagerService.java:7241)
+10-15 10:17:30.077   353   367 I WindowManager: 	at android.os.Handler.dispatchMessage(Handler.java:102)
+10-15 10:17:30.077   353   367 I WindowManager: 	at android.os.Looper.loop(Looper.java:136)
+10-15 10:17:30.077   353   367 I WindowManager: 	at android.os.HandlerThread.run(HandlerThread.java:61)
+10-15 10:17:30.077   353   367 V WindowManager: adjustWallpaper win Window{b2f6c158 u0 com.example.android.livecubes.cube1.CubeWallpaper1}mToken: WindowToken{b2ed8170 android.os.Binder@b2f4bbc8}mAppToken: null anim layer: 21000
+10-15 10:17:30.077   353   367 D WindowManager: New wallpaper: target=Window{b2ea2bd0 u0 com.android.launcher/com.android.launcher2.Launcher}mToken: AppWindowToken{b2f18078 token=Token{b2f45878 ActivityRecord{b2f45600 u0 com.android.launcher/com.android.launcher2.Launcher t1}}}mAppToken: null lower=null upper=null
+10-15 10:17:30.077   353   367 I WindowManager: Win Window{b2f41d40 u0 StatusBar}mToken: WindowToken{b2e83a30 null}mAppToken: null: isVisibleOrBehindKeyguardLw=true
+10-15 10:17:30.077   353   367 I WindowManager: Win Window{b2f56ce0 u0 Keyguard}mToken: WindowToken{b2e83a30 null}mAppToken: null: isVisibleOrBehindKeyguardLw=false
+10-15 10:17:30.077   353   367 I WindowManager: Win Window{b2ea2bd0 u0 com.android.launcher/com.android.launcher2.Launcher}mToken: AppWindowToken{b2f18078 token=Token{b2f45878 ActivityRecord{b2f45600 u0 com.android.launcher/com.android.launcher2.Launcher t1}}}mAppToken: null: isVisibleOrBehindKeyguardLw=true
+10-15 10:17:30.077   353   367 V WindowManager: Fullscreen window: Window{b2ea2bd0 u0 com.android.launcher/com.android.launcher2.Launcher}mToken: AppWindowToken{b2f18078 token=Token{b2f45878 ActivityRecord{b2f45600 u0 com.android.launcher/com.android.launcher2.Launcher t1}}}mAppToken: null
+10-15 10:17:30.077   353   367 I WindowManager: Win Window{b2f6c158 u0 com.example.android.livecubes.cube1.CubeWallpaper1}mToken: WindowToken{b2ed8170 android.os.Binder@b2f4bbc8}mAppToken: null: isVisibleOrBehindKeyguardLw=true
+10-15 10:17:30.077   353   367 I WindowManager: force=false forcefkg=false top=Window{b2ea2bd0 u0 com.android.launcher/com.android.launcher2.Launcher}mToken: AppWindowToken{b2f18078 token=Token{b2f45878 ActivityRecord{b2f45600 u0 com.android.launcher/com.android.launcher2.Launcher t1}}}mAppToken: null
+10-15 10:17:30.077   353   367 D WindowManager: frame: Rect(0, 0 - 320, 480) shown frame: RectF(0.0, 0.0, 320.0, 480.0)
+10-15 10:17:30.077   353   367 D WindowManager: attr: WM.LayoutParams{(0,0)(fillxfill) sim=#20 ty=1 fl=#1910100 pfl=0x8 fmt=-2 wanim=0x10302a1 vsysui=0x400} lp.flags=0x1910100
+10-15 10:17:30.077   353   367 V WindowManager: ** SHOWING status bar: top is not fullscreen
+10-15 10:17:30.077   353   367 V WindowManager: finishPostLayoutPolicyLw: mHideKeyguard=false
+10-15 10:17:30.077   353   367 V WindowManager: Resizing Window{b2f41d40 u0 StatusBar}mToken: WindowToken{b2e83a30 null}mAppToken: null: configChanged=false last=Rect(0, 0 - 320, 25) frame=Rect(0, 0 - 320, 25)
+10-15 10:17:30.077   353   367 V WindowManager: Resizing Window{b2ea2bd0 u0 com.android.launcher/com.android.launcher2.Launcher}mToken: AppWindowToken{b2f18078 token=Token{b2f45878 ActivityRecord{b2f45600 u0 com.android.launcher/com.android.launcher2.Launcher t1}}}mAppToken: null: configChanged=false last=Rect(0, 0 - 320, 480) frame=Rect(0, 0 - 320, 480)
+10-15 10:17:30.077   353   367 V WindowManager: Resizing Window{b2f6c158 u0 com.example.android.livecubes.cube1.CubeWallpaper1}mToken: WindowToken{b2ed8170 android.os.Binder@b2f4bbc8}mAppToken: null: configChanged=false last=Rect(0, 0 - 320, 480) frame=Rect(0, 0 - 320, 480)
+10-15 10:17:30.077   353   367 I WindowManager: <<< CLOSE TRANSACTION performLayoutAndPlaceSurfaces
+10-15 10:17:30.077   353   367 I WindowManager:   SURFACE DESTROY: Window{b2f56ce0 u0 Keyguard}mToken: WindowToken{b2e83a30 null}mAppToken: null
+10-15 10:17:30.097   353   367 I WindowManager: >>> OPEN TRANSACTION setFocusedStackFrame
+10-15 10:17:30.107   353   367 I WindowManager: >>> CLOSE TRANSACTION setFocusedStackFrame
+10-15 10:17:30.107   353   367 I WindowManager: enableScreenIfNeededLocked: mDisplayEnabled=true mForceDisplayEnabled=false mShowingBootMessages=false mSystemBooted=true
+10-15 10:17:30.107   353   367 I WindowManager: java.lang.RuntimeException: here
+10-15 10:17:30.107   353   367 I WindowManager: 	at com.android.server.wm.WindowManagerService.enableScreenIfNeededLocked(WindowManagerService.java:5343)
+10-15 10:17:30.107   353   367 I WindowManager: 	at com.android.server.wm.WindowManagerService.performLayoutAndPlaceSurfacesLockedInner(WindowManagerService.java:9585)
+10-15 10:17:30.107   353   367 I WindowManager: 	at com.android.server.wm.WindowManagerService.performLayoutAndPlaceSurfacesLockedLoop(WindowManagerService.java:8280)
+10-15 10:17:30.107   353   367 I WindowManager: 	at com.android.server.wm.WindowManagerService.performLayoutAndPlaceSurfacesLocked(WindowManagerService.java:8222)
+10-15 10:17:30.107   353   367 I WindowManager: 	at com.android.server.wm.WindowManagerService.access$300(WindowManagerService.java:157)
+10-15 10:17:30.107   353   367 I WindowManager: 	at com.android.server.wm.WindowManagerService$H.handleMessage(WindowManagerService.java:7241)
+10-15 10:17:30.107   353   367 I WindowManager: 	at android.os.Handler.dispatchMessage(Handler.java:102)
+10-15 10:17:30.107   353   367 I WindowManager: 	at android.os.Looper.loop(Looper.java:136)
+10-15 10:17:30.107   353   367 I WindowManager: 	at android.os.HandlerThread.run(HandlerThread.java:61)
+10-15 10:17:30.107   353   367 E WindowManager: performLayoutAndPlaceSurfacesLockedInner exit: animating=false
+10-15 10:17:30.107   353   367 V WindowManager: handleMessage: exit
+10-15 10:17:30.107   353   367 V WindowManager: Setting FocusedStackFrame to layer=21006
+10-15 10:17:30.127   353   367 V WindowManager: handleMessage: entry what=4
+10-15 10:17:30.127   353   367 V WindowManager: 
+10-15 10:17:30.127   353   367 V WindowManager: 
+10-15 10:17:30.127   353   367 V WindowManager: performLayoutAndPlaceSurfacesLockedInner: entry. Called by com.android.server.wm.WindowManagerService.performLayoutAndPlaceSurfacesLockedLoop:8280 com.android.server.wm.WindowManagerService.performLayoutAndPlaceSurfacesLocked:8222 com.android.server.wm.WindowManagerService.access$300:157 
+10-15 10:17:30.137   353   367 V WindowManager: mDisplayContents size: 1
+10-15 10:17:30.137   353   367 V WindowManager: displayContent: com.android.server.wm.DisplayContent@b2e5fa30
+10-15 10:17:30.137   353   367 I WindowManager: >>> OPEN TRANSACTION performLayoutAndPlaceSurfaces
+10-15 10:17:30.137   353   367 V WindowManager: Win #4 Window{b2f41d40 u0 StatusBar}mToken: WindowToken{b2e83a30 null}mAppToken: null: isOnScreen=true mDrawState=4
+10-15 10:17:30.137   353   367 V WindowManager: Win #3 Window{b2f56ce0 u0 Keyguard}mToken: WindowToken{b2e83a30 null}mAppToken: null: isOnScreen=false mDrawState=0
+10-15 10:17:30.137   353   367 V WindowManager: Win #2 Window{b2ef2c48 u0 KeyguardScrim}mToken: WindowToken{b2e83a30 null}mAppToken: null: isOnScreen=false mDrawState=0
+10-15 10:17:30.137   353   367 V WindowManager: Win #1 Window{b2ea2bd0 u0 com.android.launcher/com.android.launcher2.Launcher}mToken: AppWindowToken{b2f18078 token=Token{b2f45878 ActivityRecord{b2f45600 u0 com.android.launcher/com.android.launcher2.Launcher t1}}}mAppToken: null: isOnScreen=true mDrawState=4
+10-15 10:17:30.137   353   367 V WindowManager: Found wallpaper target: #1=Window{b2ea2bd0 u0 com.android.launcher/com.android.launcher2.Launcher}mToken: AppWindowToken{b2f18078 token=Token{b2f45878 ActivityRecord{b2f45600 u0 com.android.launcher/com.android.launcher2.Launcher t1}}}mAppToken: null
+10-15 10:17:30.137   353   367 V WindowManager: Wallpaper vis: target Window{b2ea2bd0 u0 com.android.launcher/com.android.launcher2.Launcher}mToken: AppWindowToken{b2f18078 token=Token{b2f45878 ActivityRecord{b2f45600 u0 com.android.launcher/com.android.launcher2.Launcher t1}}}mAppToken: null, obscured=false anim=null upper=null lower=null
+10-15 10:17:30.137   353   367 I WindowManager: dispatchWallpaperVisibility: 
+10-15 10:17:30.137   353   367 I WindowManager: java.lang.RuntimeException: WindowManager
+10-15 10:17:30.137   353   367 I WindowManager: 	at com.android.server.wm.WindowManagerService.dispatchWallpaperVisibility(WindowManagerService.java:2120)
+10-15 10:17:30.137   353   367 I WindowManager: 	at com.android.server.wm.WindowManagerService.adjustWallpaperWindowsLocked(WindowManagerService.java:1887)
+10-15 10:17:30.137   353   367 I WindowManager: 	at com.android.server.wm.WindowManagerService.performLayoutAndPlaceSurfacesLockedInner(WindowManagerService.java:9088)
+10-15 10:17:30.137   353   367 I WindowManager: 	at com.android.server.wm.WindowManagerService.performLayoutAndPlaceSurfacesLockedLoop(WindowManagerService.java:8280)
+10-15 10:17:30.137   353   367 I WindowManager: 	at com.android.server.wm.WindowManagerService.performLayoutAndPlaceSurfacesLocked(WindowManagerService.java:8222)
+10-15 10:17:30.137   353   367 I WindowManager: 	at com.android.server.wm.WindowManagerService.access$300(WindowManagerService.java:157)
+10-15 10:17:30.137   353   367 I WindowManager: 	at com.android.server.wm.WindowManagerService$H.handleMessage(WindowManagerService.java:7241)
+10-15 10:17:30.137   353   367 I WindowManager: 	at android.os.Handler.dispatchMessage(Handler.java:102)
+10-15 10:17:30.137   353   367 I WindowManager: 	at android.os.Looper.loop(Looper.java:136)
+10-15 10:17:30.137   353   367 I WindowManager: 	at android.os.HandlerThread.run(HandlerThread.java:61)
+10-15 10:17:30.137   353   367 V WindowManager: Wallpaper visibility: true
+10-15 10:17:30.137   353   367 V WindowManager: adjustWallpaper win Window{b2f6c158 u0 com.example.android.livecubes.cube1.CubeWallpaper1}mToken: WindowToken{b2ed8170 android.os.Binder@b2f4bbc8}mAppToken: null anim layer: 21000
+10-15 10:17:30.137   353   367 I WindowManager: Win Window{b2f41d40 u0 StatusBar}mToken: WindowToken{b2e83a30 null}mAppToken: null: isVisibleOrBehindKeyguardLw=true
+10-15 10:17:30.137   353   367 I WindowManager: Win Window{b2ea2bd0 u0 com.android.launcher/com.android.launcher2.Launcher}mToken: AppWindowToken{b2f18078 token=Token{b2f45878 ActivityRecord{b2f45600 u0 com.android.launcher/com.android.launcher2.Launcher t1}}}mAppToken: null: isVisibleOrBehindKeyguardLw=true
+10-15 10:17:30.137   353   367 V WindowManager: Fullscreen window: Window{b2ea2bd0 u0 com.android.launcher/com.android.launcher2.Launcher}mToken: AppWindowToken{b2f18078 token=Token{b2f45878 ActivityRecord{b2f45600 u0 com.android.launcher/com.android.launcher2.Launcher t1}}}mAppToken: null
+10-15 10:17:30.137   353   367 I WindowManager: Win Window{b2f6c158 u0 com.example.android.livecubes.cube1.CubeWallpaper1}mToken: WindowToken{b2ed8170 android.os.Binder@b2f4bbc8}mAppToken: null: isVisibleOrBehindKeyguardLw=true
+10-15 10:17:30.137   353   367 I WindowManager: force=false forcefkg=false top=Window{b2ea2bd0 u0 com.android.launcher/com.android.launcher2.Launcher}mToken: AppWindowToken{b2f18078 token=Token{b2f45878 ActivityRecord{b2f45600 u0 com.android.launcher/com.android.launcher2.Launcher t1}}}mAppToken: null
+10-15 10:17:30.137   353   367 D WindowManager: frame: Rect(0, 0 - 320, 480) shown frame: RectF(0.0, 0.0, 320.0, 480.0)
+10-15 10:17:30.137   353   367 D WindowManager: attr: WM.LayoutParams{(0,0)(fillxfill) sim=#20 ty=1 fl=#1910100 pfl=0x8 fmt=-2 wanim=0x10302a1 vsysui=0x400} lp.flags=0x1910100
+10-15 10:17:30.137   353   367 V WindowManager: ** SHOWING status bar: top is not fullscreen
+10-15 10:17:30.147   353   367 V WindowManager: finishPostLayoutPolicyLw: mHideKeyguard=false
+10-15 10:17:30.147   353   367 V WindowManager: Resizing Window{b2f41d40 u0 StatusBar}mToken: WindowToken{b2e83a30 null}mAppToken: null: configChanged=false last=Rect(0, 0 - 320, 25) frame=Rect(0, 0 - 320, 25)
+10-15 10:17:30.147   353   367 V WindowManager: Resizing Window{b2ea2bd0 u0 com.android.launcher/com.android.launcher2.Launcher}mToken: AppWindowToken{b2f18078 token=Token{b2f45878 ActivityRecord{b2f45600 u0 com.android.launcher/com.android.launcher2.Launcher t1}}}mAppToken: null: configChanged=false last=Rect(0, 0 - 320, 480) frame=Rect(0, 0 - 320, 480)
+10-15 10:17:30.147   353   367 V WindowManager: Resizing Window{b2f6c158 u0 com.example.android.livecubes.cube1.CubeWallpaper1}mToken: WindowToken{b2ed8170 android.os.Binder@b2f4bbc8}mAppToken: null: configChanged=false last=Rect(0, 0 - 320, 480) frame=Rect(0, 0 - 320, 480)
+10-15 10:17:30.147   353   367 I WindowManager: <<< CLOSE TRANSACTION performLayoutAndPlaceSurfaces
+10-15 10:17:30.147   353   367 I WindowManager: >>> OPEN TRANSACTION setFocusedStackFrame
+10-15 10:17:30.147   353   367 I WindowManager: >>> CLOSE TRANSACTION setFocusedStackFrame
+10-15 10:17:30.147   353   367 I WindowManager: enableScreenIfNeededLocked: mDisplayEnabled=true mForceDisplayEnabled=false mShowingBootMessages=false mSystemBooted=true
+10-15 10:17:30.147   353   367 I WindowManager: java.lang.RuntimeException: here
+10-15 10:17:30.147   353   367 I WindowManager: 	at com.android.server.wm.WindowManagerService.enableScreenIfNeededLocked(WindowManagerService.java:5343)
+10-15 10:17:30.147   353   367 I WindowManager: 	at com.android.server.wm.WindowManagerService.performLayoutAndPlaceSurfacesLockedInner(WindowManagerService.java:9585)
+10-15 10:17:30.147   353   367 I WindowManager: 	at com.android.server.wm.WindowManagerService.performLayoutAndPlaceSurfacesLockedLoop(WindowManagerService.java:8280)
+10-15 10:17:30.147   353   367 I WindowManager: 	at com.android.server.wm.WindowManagerService.performLayoutAndPlaceSurfacesLocked(WindowManagerService.java:8222)
+10-15 10:17:30.147   353   367 I WindowManager: 	at com.android.server.wm.WindowManagerService.access$300(WindowManagerService.java:157)
+10-15 10:17:30.147   353   367 I WindowManager: 	at com.android.server.wm.WindowManagerService$H.handleMessage(WindowManagerService.java:7241)
+10-15 10:17:30.147   353   367 I WindowManager: 	at android.os.Handler.dispatchMessage(Handler.java:102)
+10-15 10:17:30.147   353   367 I WindowManager: 	at android.os.Looper.loop(Looper.java:136)
+10-15 10:17:30.147   353   367 I WindowManager: 	at android.os.HandlerThread.run(HandlerThread.java:61)
+10-15 10:17:30.157   353   367 E WindowManager: performLayoutAndPlaceSurfacesLockedInner exit: animating=false
+10-15 10:17:30.157   353   367 V WindowManager: handleMessage: exit
+10-15 10:17:30.157   353   367 V WindowManager: Setting FocusedStackFrame to layer=21006
+10-15 10:17:30.177   353   616 I WindowManager: 
+10-15 10:17:30.177   353   616 I WindowManager: 
+10-15 10:17:30.177   353   616 I WindowManager: relayoutWindow begin client: android.view.IWindow$Stub$Proxy@b2ec1380
+10-15 10:17:30.177   353   616 V WindowManager: Looking up client android.os.BinderProxy@b2efc6a8: Window{b2f56ce0 u0 Keyguard}mToken: WindowToken{b2e83a30 null}mAppToken: null
+10-15 10:17:30.177   353   616 V WindowManager: Relayout Window{b2f56ce0 u0 Keyguard}mToken: WindowToken{b2e83a30 null}mAppToken: null: viewVisibility=8 req=320x480 WM.LayoutParams{(0,0)(fillxfill) sim=#10 ty=2004 fl=#d130900 pfl=0xa fmt=-3 wanim=0x7f0d0003 or=5 vsysui=0x200700 if=0x4 userActivityTimeout=10000}
+10-15 10:17:30.177   353   616 I WindowManager: Relayout Window{b2f56ce0 u0 Keyguard}mToken: WindowToken{b2e83a30 null}mAppToken: null: oldVis=8 newVis=8
+10-15 10:17:30.177   353   616 I WindowManager: java.lang.RuntimeException
+10-15 10:17:30.177   353   616 I WindowManager: 	at com.android.server.wm.WindowManagerService.relayoutWindow(WindowManagerService.java:2934)
+10-15 10:17:30.177   353   616 I WindowManager: 	at com.android.server.wm.Session.relayout(Session.java:194)
+10-15 10:17:30.177   353   616 I WindowManager: 	at android.view.IWindowSession$Stub.onTransact(IWindowSession.java:235)
+10-15 10:17:30.177   353   616 I WindowManager: 	at com.android.server.wm.Session.onTransact(Session.java:125)
+10-15 10:17:30.177   353   616 I WindowManager: 	at android.os.Binder.execTransact(Binder.java:404)
+10-15 10:17:30.177   353   616 I WindowManager: 	at dalvik.system.NativeStart.run(Native Method)
+10-15 10:17:30.177   353   616 I WindowManager: viewVisibility: 8
+10-15 10:17:30.187   353   616 I WindowManager: win.mAppToken is null
+10-15 10:17:30.187   353   616 I WindowManager: Releasing surface in: Window{b2f56ce0 u0 Keyguard}mToken: WindowToken{b2e83a30 null}mAppToken: null
+10-15 10:17:30.187   353   616 V WindowManager: Checking app orientation: AppWindowToken{b2f18078 token=Token{b2f45878 ActivityRecord{b2f45600 u0 com.android.launcher/com.android.launcher2.Launcher t1}}}
+10-15 10:17:30.187   353   616 V WindowManager: Done at AppWindowToken{b2f18078 token=Token{b2f45878 ActivityRecord{b2f45600 u0 com.android.launcher/com.android.launcher2.Launcher t1}}} -- full screen, return 5
+10-15 10:17:30.187   353   616 V WindowManager: 
+10-15 10:17:30.187   353   616 V WindowManager: 
+10-15 10:17:30.187   353   616 V WindowManager: performLayoutAndPlaceSurfacesLockedInner: entry. Called by com.android.server.wm.WindowManagerService.performLayoutAndPlaceSurfacesLockedLoop:8280 com.android.server.wm.WindowManagerService.performLayoutAndPlaceSurfacesLocked:8222 com.android.server.wm.WindowManagerService.relayoutWindow:3101 
+10-15 10:17:30.187   353   616 V WindowManager: mDisplayContents size: 1
+10-15 10:17:30.187   353   616 V WindowManager: displayContent: com.android.server.wm.DisplayContent@b2e5fa30
+10-15 10:17:30.187   353   616 I WindowManager: >>> OPEN TRANSACTION performLayoutAndPlaceSurfaces
+10-15 10:17:30.187   353   616 V WindowManager: 
+10-15 10:17:30.187   353   616 V WindowManager: 
+10-15 10:17:30.187   353   616 V WindowManager: performLayoutLockedInner
+10-15 10:17:30.187   353   616 V WindowManager: WindowState: Window{b2f41d40 u0 StatusBar}mToken: WindowToken{b2e83a30 null}mAppToken: null
+10-15 10:17:30.187   353   616 V WindowManager: WindowState: Window{b2f56ce0 u0 Keyguard}mToken: WindowToken{b2e83a30 null}mAppToken: null
+10-15 10:17:30.187   353   616 V WindowManager: WindowState: Window{b2ef2c48 u0 KeyguardScrim}mToken: WindowToken{b2e83a30 null}mAppToken: null
+10-15 10:17:30.187   353   616 V WindowManager: WindowState: Window{b2ea2bd0 u0 com.android.launcher/com.android.launcher2.Launcher}mToken: AppWindowToken{b2f18078 token=Token{b2f45878 ActivityRecord{b2f45600 u0 com.android.launcher/com.android.launcher2.Launcher t1}}}mAppToken: null
+10-15 10:17:30.187   353   616 V WindowManager: WindowState: Window{b2f6c158 u0 com.example.android.livecubes.cube1.CubeWallpaper1}mToken: WindowToken{b2ed8170 android.os.Binder@b2f4bbc8}mAppToken: null
+10-15 10:17:30.187   353   616 V WindowManager: -------------------------------------
+10-15 10:17:30.187   353   616 V WindowManager: performLayout: needed=false dw=320 dh=480
+10-15 10:17:30.187   353   616 I WindowManager: mDock rect: (0,0 - 320,480)
+10-15 10:17:30.187   353   616 V WindowManager: Status bar: dock=[0,25][320,480] content=[0,25][320,480] cur=[0,25][320,480]
+10-15 10:17:30.187   353   616 V WindowManager: 1ST PASS Window{b2f41d40 u0 StatusBar}mToken: WindowToken{b2e83a30 null}mAppToken: null: gone=false mHaveFrame=true mLayoutAttached=false screen changed=false
+10-15 10:17:30.187   353   616 V WindowManager:   VIS: mViewVisibility=0 mRelayoutCalled=true hidden=false hiddenRequested=false mAttachedHidden=false
+10-15 10:17:30.197   353   616 V WindowManager:   LAYOUT: mFrame=Rect(0, 0 - 320, 25) mContainingFrame=Rect(0, 0 - 320, 480) mDisplayFrame=Rect(0, 0 - 320, 480)
+10-15 10:17:30.197   353   616 V WindowManager: 1ST PASS Window{b2f56ce0 u0 Keyguard}mToken: WindowToken{b2e83a30 null}mAppToken: null: gone=true mHaveFrame=true mLayoutAttached=false screen changed=false
+10-15 10:17:30.197   353   616 V WindowManager:   GONE: mViewVisibility=8 mRelayoutCalled=true hidden=false hiddenRequested=false mAttachedHidden=false
+10-15 10:17:30.197   353   616 V WindowManager: layoutWindowLw(Keyguard): IN_SCREEN, INSET_DECOR
+10-15 10:17:30.197   353   616 V WindowManager: Compute frame Keyguard: sim=#10 attach=null type=2004 flags=0x0d130900 pf=[0,0][320,480] df=[0,0][320,480] of=[0,0][320,480] cf=[0,25][320,480] vf=[0,25][320,480] dcf=[0,0][320,480]
+10-15 10:17:30.197   353   616 V WindowManager:   LAYOUT: mFrame=Rect(0, 0 - 320, 480) mContainingFrame=Rect(0, 0 - 320, 480) mDisplayFrame=Rect(0, 0 - 320, 480)
+10-15 10:17:30.197   353   616 V WindowManager: 1ST PASS Window{b2ef2c48 u0 KeyguardScrim}mToken: WindowToken{b2e83a30 null}mAppToken: null: gone=true mHaveFrame=true mLayoutAttached=false screen changed=true
+10-15 10:17:30.197   353   616 V WindowManager:   GONE: mViewVisibility=8 mRelayoutCalled=true hidden=false hiddenRequested=false mAttachedHidden=false
+10-15 10:17:30.197   353   616 V WindowManager: 1ST PASS Window{b2ea2bd0 u0 com.android.launcher/com.android.launcher2.Launcher}mToken: AppWindowToken{b2f18078 token=Token{b2f45878 ActivityRecord{b2f45600 u0 com.android.launcher/com.android.launcher2.Launcher t1}}}mAppToken: null: gone=false mHaveFrame=true mLayoutAttached=false screen changed=false
+10-15 10:17:30.197   353   616 V WindowManager:   VIS: mViewVisibility=0 mRelayoutCalled=true hidden=false hiddenRequested=false mAttachedHidden=false
+10-15 10:17:30.197   353   616 V WindowManager: layoutWindowLw(com.android.launcher/com.android.launcher2.Launcher): IN_SCREEN, INSET_DECOR
+10-15 10:17:30.197   353   616 V WindowManager: Compute frame com.android.launcher/com.android.launcher2.Launcher: sim=#20 attach=null type=1 flags=0x01910100 pf=[0,0][320,480] df=[0,0][320,480] of=[0,0][320,480] cf=[0,25][320,480] vf=[0,25][320,480] dcf=[0,0][320,480]
+10-15 10:17:30.197   353   616 V WindowManager:   LAYOUT: mFrame=Rect(0, 0 - 320, 480) mContainingFrame=Rect(0, 0 - 320, 480) mDisplayFrame=Rect(0, 0 - 320, 480)
+10-15 10:17:30.197   353   616 V WindowManager: 1ST PASS Window{b2f6c158 u0 com.example.android.livecubes.cube1.CubeWallpaper1}mToken: WindowToken{b2ed8170 android.os.Binder@b2f4bbc8}mAppToken: null: gone=false mHaveFrame=true mLayoutAttached=false screen changed=false
+10-15 10:17:30.197   353   616 V WindowManager:   VIS: mViewVisibility=0 mRelayoutCalled=true hidden=false hiddenRequested=false mAttachedHidden=false
+10-15 10:17:30.197   353   616 V WindowManager: layoutWindowLw(com.example.android.livecubes.cube1.CubeWallpaper1): IN_SCREEN
+10-15 10:17:30.197   353   616 V WindowManager: Compute frame com.example.android.livecubes.cube1.CubeWallpaper1: sim=#0 attach=null type=2013 flags=0x00000308 pf=[0,0][320,480] df=[-10000,-10000][10000,10000] of=[-10000,-10000][10000,10000] cf=[-10000,-10000][10000,10000] vf=[-10000,-10000][10000,10000] dcf=[0,0][320,480]
+10-15 10:17:30.197   353   616 V WindowManager:   LAYOUT: mFrame=Rect(0, 0 - 320, 480) mContainingFrame=Rect(0, 0 - 320, 480) mDisplayFrame=Rect(-10000, -10000 - 10000, 10000)
+10-15 10:17:30.197   353   616 I WindowManager: Win Window{b2f41d40 u0 StatusBar}mToken: WindowToken{b2e83a30 null}mAppToken: null: isVisibleOrBehindKeyguardLw=true
+10-15 10:17:30.197   353   616 I WindowManager: Win Window{b2ea2bd0 u0 com.android.launcher/com.android.launcher2.Launcher}mToken: AppWindowToken{b2f18078 token=Token{b2f45878 ActivityRecord{b2f45600 u0 com.android.launcher/com.android.launcher2.Launcher t1}}}mAppToken: null: isVisibleOrBehindKeyguardLw=true
+10-15 10:17:30.197   353   616 V WindowManager: Fullscreen window: Window{b2ea2bd0 u0 com.android.launcher/com.android.launcher2.Launcher}mToken: AppWindowToken{b2f18078 token=Token{b2f45878 ActivityRecord{b2f45600 u0 com.android.launcher/com.android.launcher2.Launcher t1}}}mAppToken: null
+10-15 10:17:30.197   353   616 I WindowManager: Win Window{b2f6c158 u0 com.example.android.livecubes.cube1.CubeWallpaper1}mToken: WindowToken{b2ed8170 android.os.Binder@b2f4bbc8}mAppToken: null: isVisibleOrBehindKeyguardLw=true
+10-15 10:17:30.197   353   616 I WindowManager: force=false forcefkg=false top=Window{b2ea2bd0 u0 com.android.launcher/com.android.launcher2.Launcher}mToken: AppWindowToken{b2f18078 token=Token{b2f45878 ActivityRecord{b2f45600 u0 com.android.launcher/com.android.launcher2.Launcher t1}}}mAppToken: null
+10-15 10:17:30.197   353   616 D WindowManager: frame: Rect(0, 0 - 320, 480) shown frame: RectF(0.0, 0.0, 320.0, 480.0)
+10-15 10:17:30.197   353   616 D WindowManager: attr: WM.LayoutParams{(0,0)(fillxfill) sim=#20 ty=1 fl=#1910100 pfl=0x8 fmt=-2 wanim=0x10302a1 vsysui=0x400} lp.flags=0x1910100
+10-15 10:17:30.197   353   616 V WindowManager: ** SHOWING status bar: top is not fullscreen
+10-15 10:17:30.197   353   616 V WindowManager: finishPostLayoutPolicyLw: mHideKeyguard=false
+10-15 10:17:30.207   353   616 V WindowManager: Resizing Window{b2f41d40 u0 StatusBar}mToken: WindowToken{b2e83a30 null}mAppToken: null: configChanged=false last=Rect(0, 0 - 320, 25) frame=Rect(0, 0 - 320, 25)
+10-15 10:17:30.207   353   616 I WindowManager:   SURFACE CROP [0,0][320,480]: Window{b2ea2bd0 u0 com.android.launcher/com.android.launcher2.Launcher}mToken: AppWindowToken{b2f18078 token=Token{b2f45878 ActivityRecord{b2f45600 u0 com.android.launcher/com.android.launcher2.Launcher t1}}}mAppToken: null
+10-15 10:17:30.207   353   616 V WindowManager: Resizing Window{b2ea2bd0 u0 com.android.launcher/com.android.launcher2.Launcher}mToken: AppWindowToken{b2f18078 token=Token{b2f45878 ActivityRecord{b2f45600 u0 com.android.launcher/com.android.launcher2.Launcher t1}}}mAppToken: null: configChanged=false last=Rect(0, 0 - 320, 480) frame=Rect(0, 0 - 320, 480)
+10-15 10:17:30.207   353   616 V WindowManager: Resizing Window{b2f6c158 u0 com.example.android.livecubes.cube1.CubeWallpaper1}mToken: WindowToken{b2ed8170 android.os.Binder@b2f4bbc8}mAppToken: null: configChanged=false last=Rect(0, 0 - 320, 480) frame=Rect(0, 0 - 320, 480)
+10-15 10:17:30.207   353   616 I WindowManager: <<< CLOSE TRANSACTION performLayoutAndPlaceSurfaces
+10-15 10:17:30.227   353   616 I WindowManager: >>> OPEN TRANSACTION setFocusedStackFrame
+10-15 10:17:30.227   353   616 I WindowManager: >>> CLOSE TRANSACTION setFocusedStackFrame
+10-15 10:17:30.227   353   616 I WindowManager: enableScreenIfNeededLocked: mDisplayEnabled=true mForceDisplayEnabled=false mShowingBootMessages=false mSystemBooted=true
+10-15 10:17:30.227   353   616 I WindowManager: java.lang.RuntimeException: here
+10-15 10:17:30.227   353   616 I WindowManager: 	at com.android.server.wm.WindowManagerService.enableScreenIfNeededLocked(WindowManagerService.java:5343)
+10-15 10:17:30.227   353   616 I WindowManager: 	at com.android.server.wm.WindowManagerService.performLayoutAndPlaceSurfacesLockedInner(WindowManagerService.java:9585)
+10-15 10:17:30.227   353   616 I WindowManager: 	at com.android.server.wm.WindowManagerService.performLayoutAndPlaceSurfacesLockedLoop(WindowManagerService.java:8280)
+10-15 10:17:30.227   353   616 I WindowManager: 	at com.android.server.wm.WindowManagerService.performLayoutAndPlaceSurfacesLocked(WindowManagerService.java:8222)
+10-15 10:17:30.227   353   616 I WindowManager: 	at com.android.server.wm.WindowManagerService.relayoutWindow(WindowManagerService.java:3101)
+10-15 10:17:30.227   353   616 I WindowManager: 	at com.android.server.wm.Session.relayout(Session.java:194)
+10-15 10:17:30.227   353   616 I WindowManager: 	at android.view.IWindowSession$Stub.onTransact(IWindowSession.java:235)
+10-15 10:17:30.227   353   616 I WindowManager: 	at com.android.server.wm.Session.onTransact(Session.java:125)
+10-15 10:17:30.227   353   616 I WindowManager: 	at android.os.Binder.execTransact(Binder.java:404)
+10-15 10:17:30.227   353   616 I WindowManager: 	at dalvik.system.NativeStart.run(Native Method)
+10-15 10:17:30.237   353   616 E WindowManager: performLayoutAndPlaceSurfacesLockedInner exit: animating=false
+10-15 10:17:30.237   353   616 V WindowManager: Relayout given client android.os.BinderProxy@b2efc6a8, requestedWidth=320, requestedHeight=480, viewVisibility=8
+10-15 10:17:30.237   353   616 V WindowManager: Relayout returning frame=Rect(0, 0 - 320, 480), surface=Surface(name=null)/@0xb2f7a980
+10-15 10:17:30.237   353   616 V WindowManager: Relayout of Window{b2f56ce0 u0 Keyguard}mToken: WindowToken{b2e83a30 null}mAppToken: null: focusMayChange=false
+10-15 10:17:30.237   353   616 V WindowManager: Relayout complete Window{b2f56ce0 u0 Keyguard}mToken: WindowToken{b2e83a30 null}mAppToken: null: outFrame=[0,0][320,480]
+10-15 10:17:30.237   353   367 V WindowManager: Setting FocusedStackFrame to layer=21006
+10-15 10:17:30.237   353   616 I WindowManager: relayoutWindow end
+
