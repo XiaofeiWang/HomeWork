@@ -1,0 +1,5 @@
+Zygote£º
+
+http://stackoverflow.com/questions/9153166/understanding-android-zygote-and-dalvikvm
+
+http://stackoverflow.com/questions/5962255/nohistory-and-child-activity-result/5974459#5974459
