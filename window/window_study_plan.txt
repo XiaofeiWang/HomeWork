@@ -1,0 +1,7 @@
+分屏模式和自由模式
+1. 窗口的绘制过程，动画、拖延而没有黑屏
+2. Stack的管理
+3. Divider的添加过程
+4. SystemUI多窗口相关处理
+
+http://www.cnblogs.com/all-for-fiona/p/4054527.html
