@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="app_name">ActvityTypeTest</string>
+    <string name="hello_world">Hello world!</string>
+    <string name="action_settings">Settings</string>
+    <string name="normal_activity">Normal Activity</string>
+    <string name="singletask_activity">SingleTask Activity</string>
+    <string name="launch_singletask">Launch SingleTask Activity</string>
+    <string name="launch_noraml">Launch Normal Acivity</string>
+</resources>
