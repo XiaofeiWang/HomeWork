@@ -1,0 +1,157 @@
+Thread [Binder:209_1] (Suspended (breakpoint at line 139 in TaskStack))	
+	owns: HashMap  (id=118)	
+	owns: ActivityManagerService  (id=119)	
+	TaskStack.<init>(WindowManagerService, int) line: 139	
+	WindowManagerService.attachStack(int, int, boolean) line: 5065	
+	ActivityStack.attachDisplay(ActivityStackSupervisor$ActivityDisplay, boolean) line: 455	
+	ActivityStackSupervisor$ActivityContainer.attachToDisplayLocked(ActivityStackSupervisor$ActivityDisplay, boolean) line: 3995	
+	ActivityStackSupervisor.createStackOnDisplay(int, int, boolean) line: 2328	
+	ActivityStackSupervisor.getStack(int, boolean, boolean) line: 1932	
+	ActivityStarter.computeStackFocus(ActivityRecord, boolean, Rect, int, ActivityOptions) line: 1928	
+	ActivityStarter.setTaskFromReuseOrCreateNewTask(TaskRecord) line: 1660	
+	ActivityStarter.startActivityUnchecked(ActivityRecord, ActivityRecord, IVoiceInteractionSession, IVoiceInteractor, int, boolean, ActivityOptions, TaskRecord) line: 1120	
+	ActivityStarter.startActivityLocked(IApplicationThread, Intent, Intent, String, ActivityInfo, ResolveInfo, IVoiceInteractionSession, IVoiceInteractor, IBinder, String, int, int, int, String, int, int, int, ActivityOptions, boolean, boolean, ActivityRecord[], ActivityStackSupervisor$ActivityContainer, TaskRecord) line: 537	
+	ActivityStarter.startActivityMayWait(IApplicationThread, int, String, Intent, String, IVoiceInteractionSession, IVoiceInteractor, IBinder, String, int, int, ProfilerInfo, IActivityManager$WaitResult, Configuration, Bundle, boolean, int, IActivityContainer, TaskRecord) line: 821	
+	ActivityManagerService.startActivityAsUser(IApplicationThread, String, Intent, String, IBinder, String, int, int, ProfilerInfo, Bundle, int) line: 4344	
+	ActivityManagerService.startActivity(IApplicationThread, String, Intent, String, IBinder, String, int, int, ProfilerInfo, Bundle) line: 4312	
+	ActivityManagerService(ActivityManagerNative).onTransact(int, Parcel, Parcel, int) line: 165	
+	ActivityManagerService.onTransact(int, Parcel, Parcel, int) line: 2793	
+	ActivityManagerService(Binder).execTransact(int, long, long, int) line: 565	
+
+
+Thread [Binder:209_1] (Suspended (breakpoint at line 2783 in ActivityStack))	
+	owns: ActivityManagerService  (id=119)	
+	ActivityStack.startActivityLocked(ActivityRecord, boolean, boolean, ActivityOptions) line: 2783	
+	ActivityStarter.startActivityUnchecked(ActivityRecord, ActivityRecord, IVoiceInteractionSession, IVoiceInteractor, int, boolean, ActivityOptions, TaskRecord) line: 1177	
+	ActivityStarter.startActivityLocked(IApplicationThread, Intent, Intent, String, ActivityInfo, ResolveInfo, IVoiceInteractionSession, IVoiceInteractor, IBinder, String, int, int, int, String, int, int, int, ActivityOptions, boolean, boolean, ActivityRecord[], ActivityStackSupervisor$ActivityContainer, TaskRecord) line: 537	
+	ActivityStarter.startActivityMayWait(IApplicationThread, int, String, Intent, String, IVoiceInteractionSession, IVoiceInteractor, IBinder, String, int, int, ProfilerInfo, IActivityManager$WaitResult, Configuration, Bundle, boolean, int, IActivityContainer, TaskRecord) line: 821	
+	ActivityManagerService.startActivityAsUser(IApplicationThread, String, Intent, String, IBinder, String, int, int, ProfilerInfo, Bundle, int) line: 4344	
+	ActivityManagerService.startActivity(IApplicationThread, String, Intent, String, IBinder, String, int, int, ProfilerInfo, Bundle) line: 4312	
+	ActivityManagerService(ActivityManagerNative).onTransact(int, Parcel, Parcel, int) line: 165	
+	ActivityManagerService.onTransact(int, Parcel, Parcel, int) line: 2793	
+	ActivityManagerService(Binder).execTransact(int, long, long, int) line: 565	
+
+
+
+Thread [Binder:209_3] (Suspended)	
+	owns: ActivityManagerService  (id=119)	
+	ActivityStackSupervisor.startSpecificActivityLocked(ActivityRecord, boolean, boolean) line: 1371	
+	ActivityStack.resumeTopActivityInnerLocked(ActivityRecord, ActivityOptions) line: 2567	
+	ActivityStack.resumeTopActivityUncheckedLocked(ActivityRecord, ActivityOptions) line: 2118	
+	ActivityStackSupervisor.resumeFocusedStackTopActivityLocked(ActivityStack, ActivityRecord, ActivityOptions) line: 1808	
+	ActivityStack.completePauseLocked(boolean, ActivityRecord) line: 1318	
+	ActivityStack.activityPausedLocked(IBinder, boolean) line: 1200	
+	ActivityManagerService.activityPaused(IBinder) line: 6899	
+	ActivityManagerService(ActivityManagerNative).onTransact(int, Parcel, Parcel, int) line: 571	
+	ActivityManagerService.onTransact(int, Parcel, Parcel, int) line: 2793	
+	ActivityManagerService(Binder).execTransact(int, long, long, int) line: 565	
+
+
+Thread [Binder:209_2] (Suspended (breakpoint at line 2318 in WindowManagerService))	
+	owns: HashMap  (id=118)	
+	WindowManagerService.removeWindowLocked(WindowState, boolean) line: 2318	
+	WindowManagerService.removeWindowLocked(WindowState) line: 2314	
+	WindowManagerService.removeWindow(Session, IWindow) line: 2309	
+	Session.remove(IWindow) line: 193	
+	Session(IWindowSession$Stub).onTransact(int, Parcel, Parcel, int) line: 242	
+	Session.onTransact(int, Parcel, Parcel, int) line: 136	
+	Session(Binder).execTransact(int, long, long, int) line: 565	
+	
+	
+	
+	
+	
+Thread [android.display] (Suspended (breakpoint at line 2456 in WindowManagerService))	
+	owns: HashMap  (id=118)	
+	WindowManagerService.removeWindowInnerLocked(WindowState) line: 2456	
+	AppWindowToken.destroySurfaces(boolean) line: 420	
+	AppWindowToken.destroySurfaces() line: 382	
+	WindowStateAnimator.finishExit() line: 568	
+	WindowStateAnimator.stepAnimationLocked(long) line: 494	
+	WindowAnimator.updateWindowsLocked(int) line: 321	
+	WindowAnimator.animateLocked(long) line: 722	
+	WindowAnimator.-wrap0(WindowAnimator, long) line: not available	
+	WindowAnimator$1.doFrame(long) line: 143	
+	Choreographer$CallbackRecord.run(long) line: 872	
+	Choreographer.doCallbacks(int, long) line: 686	
+	Choreographer.doFrame(long, int) line: 618	
+	Choreographer$FrameDisplayEventReceiver.run() line: 860	
+	Handler.handleCallback(Message) line: 751	
+	Choreographer$FrameHandler(Handler).dispatchMessage(Message) line: 95	
+	Looper.loop() line: 154	
+	DisplayThread(HandlerThread).run() line: 61	
+	DisplayThread(ServiceThread).run() line: 46	
+
+
+
+Thread [android.display] (Suspended (breakpoint at line 515 in WindowStateAnimator))	
+	owns: HashMap  (id=118)	
+	WindowStateAnimator.finishExit() line: 515	
+	AppWindowAnimator.stepAnimationLocked(long, int) line: 427	
+	WindowAnimator.updateAppWindowsLocked(int) line: 179	
+	WindowAnimator.animateLocked(long) line: 696	
+	WindowAnimator.-wrap0(WindowAnimator, long) line: not available	
+	WindowAnimator$1.doFrame(long) line: 143	
+	Choreographer$CallbackRecord.run(long) line: 872	
+	Choreographer.doCallbacks(int, long) line: 686	
+	Choreographer.doFrame(long, int) line: 618	
+	Choreographer$FrameDisplayEventReceiver.run() line: 860	
+	Handler.handleCallback(Message) line: 751	
+	Choreographer$FrameHandler(Handler).dispatchMessage(Message) line: 95	
+	Looper.loop() line: 154	
+	DisplayThread(HandlerThread).run() line: 61	
+	DisplayThread(ServiceThread).run() line: 46	
+
+
+Thread [android.display] (Suspended (breakpoint at line 494 in WindowStateAnimator))	
+	owns: HashMap  (id=118)	
+	WindowStateAnimator.stepAnimationLocked(long) line: 494	
+	WindowAnimator.updateWindowsLocked(int) line: 321	
+	WindowAnimator.animateLocked(long) line: 722	
+	WindowAnimator.-wrap0(WindowAnimator, long) line: not available	
+	WindowAnimator$1.doFrame(long) line: 143	
+	Choreographer$CallbackRecord.run(long) line: 872	
+	Choreographer.doCallbacks(int, long) line: 686	
+	Choreographer.doFrame(long, int) line: 618	
+	Choreographer$FrameDisplayEventReceiver.run() line: 860	
+	Handler.handleCallback(Message) line: 751	
+	Choreographer$FrameHandler(Handler).dispatchMessage(Message) line: 95	
+	Looper.loop() line: 154	
+	DisplayThread(HandlerThread).run() line: 61	
+	DisplayThread(ServiceThread).run() line: 46	
+
+
+Thread [main] (Suspended (breakpoint at line 922 in IWindowSession$Stub$Proxy))	
+	owns: ViewRootImpl  (id=4785)	
+	owns: Object  (id=4774)	
+	IWindowSession$Stub$Proxy.remove(IWindow) line: 922	
+	ViewRootImpl.dispatchDetachedFromWindow() line: 3285	
+	ViewRootImpl.doDie() line: 5880	
+	ViewRootImpl.die(boolean) line: 5857	
+	WindowManagerGlobal.removeViewLocked(int, boolean) line: 446	
+	WindowManagerGlobal.removeView(View, boolean) line: 384	
+	WindowManagerImpl.removeViewImmediate(View) line: 124	
+	ActivityThread.handleDestroyActivity(IBinder, boolean, int, boolean) line: 4210	
+	ActivityThread.-wrap6(ActivityThread, IBinder, boolean, int, boolean) line: not available	
+	ActivityThread$H.handleMessage(Message) line: 1522	
+	ActivityThread$H(Handler).dispatchMessage(Message) line: 102	
+	Looper.loop() line: 154	
+	ActivityThread.main(String[]) line: 6088	
+	Method.invoke(Object, Object...) line: not available [native method]	
+	ZygoteInit$MethodAndArgsCaller.run() line: 886	
+	ZygoteInit.main(String[]) line: 776	
+
+	
+	
+Thread [Binder:209_2] (Suspended (breakpoint at line 2318 in WindowManagerService))	
+	owns: HashMap  (id=118)	
+	WindowManagerService.removeWindowLocked(WindowState, boolean) line: 2318	
+	WindowManagerService.removeWindowLocked(WindowState) line: 2314	
+	WindowManagerService.removeWindow(Session, IWindow) line: 2309	
+	Session.remove(IWindow) line: 193	
+	Session(IWindowSession$Stub).onTransact(int, Parcel, Parcel, int) line: 242	
+	Session.onTransact(int, Parcel, Parcel, int) line: 136	
+	Session(Binder).execTransact(int, long, long, int) line: 565	
+
+	
+
