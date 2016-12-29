@@ -1,0 +1,142 @@
+Thread [Binder:232_7] (Suspended (breakpoint at line 2103 in WindowState))	
+	owns: HashMap  (id=110)	
+	owns: ActivityManagerService  (id=132)	
+	WindowState.destroySavedSurface() line: 2103	
+	AppWindowToken.destroySavedSurfaces() line: 577	
+	Task.resizeWindows() line: 614	
+	Task.resizeLocked(Rect, Configuration, boolean) line: 312	
+	TaskStack.setBounds(Rect, SparseArray, SparseArray, SparseArray) line: 195	
+	WindowManagerService.resizeStack(int, Rect, SparseArray, SparseArray, SparseArray) line: 5242	
+	ActivityStackSupervisor.resizeStackUncheckedLocked(ActivityStack, Rect, Rect, Rect) line: 2110	
+	ActivityStackSupervisor.resizeStackLocked(int, Rect, Rect, Rect, boolean, boolean, boolean) line: 2036	
+	ActivityStackSupervisor.resizeDockedStackLocked(Rect, Rect, Rect, Rect, Rect, boolean, boolean) line: 2218	
+	ActivityStackSupervisor.resizeDockedStackLocked(Rect, Rect, Rect, Rect, Rect, boolean) line: 2170	
+	ActivityStack.attachDisplay(ActivityStackSupervisor$ActivityDisplay, boolean) line: 465	
+	ActivityStackSupervisor$ActivityContainer.attachToDisplayLocked(ActivityStackSupervisor$ActivityDisplay, boolean) line: 3995	
+	ActivityStackSupervisor.createStackOnDisplay(int, int, boolean) line: 2328	
+	ActivityStackSupervisor.getStack(int, boolean, boolean) line: 1932	
+	ActivityStackSupervisor.moveTaskToStackUncheckedLocked(TaskRecord, int, boolean, boolean, String) line: 2434	
+	ActivityStackSupervisor.moveTaskToStackLocked(int, int, boolean, boolean, String, boolean, boolean) line: 2492	
+	ActivityStackSupervisor.moveTaskToStackLocked(int, int, boolean, boolean, String, boolean) line: 2449	
+	ActivityStackSupervisor.startActivityFromRecentsInner(int, Bundle) line: 4452	
+	ActivityManagerService.startActivityFromRecents(int, Bundle) line: 4705	
+	ActivityManagerService(ActivityManagerNative).onTransact(int, Parcel, Parcel, int) line: 367	
+	ActivityManagerService.onTransact(int, Parcel, Parcel, int) line: 2793	
+	ActivityManagerService(Binder).execTransact(int, long, long, int) line: 565	
+
+
+
+Thread [Binder:232_7] (Suspended (breakpoint at line 2103 in WindowState))	
+	owns: HashMap  (id=110)	
+	owns: ActivityManagerService  (id=132)	
+	WindowState.destroySavedSurface() line: 2103	
+	AppWindowToken.destroySavedSurfaces() line: 577	
+	WindowState.clearHasSavedSurface() line: 2157	
+	WindowStateAnimator.destroySurfaceLocked() line: 904	
+	WindowState.destroySavedSurface() line: 2107	
+	AppWindowToken.destroySavedSurfaces() line: 577	
+	Task.resizeWindows() line: 614	
+	Task.resizeLocked(Rect, Configuration, boolean) line: 312	
+	TaskStack.setBounds(Rect, SparseArray, SparseArray, SparseArray) line: 195	
+	WindowManagerService.resizeStack(int, Rect, SparseArray, SparseArray, SparseArray) line: 5242	
+	ActivityStackSupervisor.resizeStackUncheckedLocked(ActivityStack, Rect, Rect, Rect) line: 2110	
+	ActivityStackSupervisor.resizeStackLocked(int, Rect, Rect, Rect, boolean, boolean, boolean) line: 2036	
+	ActivityStackSupervisor.resizeDockedStackLocked(Rect, Rect, Rect, Rect, Rect, boolean, boolean) line: 2218	
+	ActivityStackSupervisor.resizeDockedStackLocked(Rect, Rect, Rect, Rect, Rect, boolean) line: 2170	
+	ActivityStack.attachDisplay(ActivityStackSupervisor$ActivityDisplay, boolean) line: 465	
+	ActivityStackSupervisor$ActivityContainer.attachToDisplayLocked(ActivityStackSupervisor$ActivityDisplay, boolean) line: 3995	
+	ActivityStackSupervisor.createStackOnDisplay(int, int, boolean) line: 2328	
+	ActivityStackSupervisor.getStack(int, boolean, boolean) line: 1932	
+	ActivityStackSupervisor.moveTaskToStackUncheckedLocked(TaskRecord, int, boolean, boolean, String) line: 2434	
+	ActivityStackSupervisor.moveTaskToStackLocked(int, int, boolean, boolean, String, boolean, boolean) line: 2492	
+	ActivityStackSupervisor.moveTaskToStackLocked(int, int, boolean, boolean, String, boolean) line: 2449	
+	ActivityStackSupervisor.startActivityFromRecentsInner(int, Bundle) line: 4452	
+	ActivityManagerService.startActivityFromRecents(int, Bundle) line: 4705	
+	ActivityManagerService(ActivityManagerNative).onTransact(int, Parcel, Parcel, int) line: 367	
+	ActivityManagerService.onTransact(int, Parcel, Parcel, int) line: 2793	
+	ActivityManagerService(Binder).execTransact(int, long, long, int) line: 565	
+
+
+
+Thread [Binder:232_7] (Suspended (breakpoint at line 2103 in WindowState))	
+	owns: HashMap  (id=110)	
+	owns: ActivityManagerService  (id=132)	
+	WindowState.destroySavedSurface() line: 2103	
+	AppWindowToken.destroySavedSurfaces() line: 577	
+	Task.resizeWindows() line: 614	
+	Task.resizeLocked(Rect, Configuration, boolean) line: 312	
+	WindowManagerService.resizeTask(int, Rect, Configuration, boolean, boolean) line: 5300	
+	ActivityStackSupervisor.resizeTaskLocked(TaskRecord, Rect, int, boolean, boolean) line: 2314	
+	ActivityStackSupervisor.moveTaskToStackLocked(int, int, boolean, boolean, String, boolean, boolean) line: 2516	
+	ActivityStackSupervisor.moveTaskToStackLocked(int, int, boolean, boolean, String, boolean) line: 2449	
+	ActivityStackSupervisor.startActivityFromRecentsInner(int, Bundle) line: 4452	
+	ActivityManagerService.startActivityFromRecents(int, Bundle) line: 4705	
+	ActivityManagerService(ActivityManagerNative).onTransact(int, Parcel, Parcel, int) line: 367	
+	ActivityManagerService.onTransact(int, Parcel, Parcel, int) line: 2793	
+	ActivityManagerService(Binder).execTransact(int, long, long, int) line: 565	
+
+
+
+
+Thread [android.display] (Suspended (breakpoint at line 2103 in WindowState))	
+	owns: HashMap  (id=110)	
+	owns: ActivityManagerService  (id=132)	
+	WindowState.destroySavedSurface() line: 2103	resizeStack
+	AppWindowToken.destroySavedSurfaces() line: 577	
+	Task.resizeWindows() line: 614	
+	Task.resizeLocked(Rect, Configuration, boolean) line: 312	
+	TaskStack.setBounds(Rect, SparseArray, SparseArray, SparseArray) line: 195	
+	WindowManagerService.resizeStack(int, Rect, SparseArray, SparseArray, SparseArray) line: 5242	
+	ActivityStackSupervisor.resizeStackUncheckedLocked(ActivityStack, Rect, Rect, Rect) line: 2110	
+	ActivityStack.continueUpdateBounds() line: 509	
+	ActivityStackSupervisor.continueUpdateBounds(int) line: 2057	
+	ActivityStackSupervisor.notifyAppTransitionDone() line: 2062	
+	ActivityManagerService$LocalService.notifyAppTransitionFinished() line: 21894	
+	WindowManagerService$H.handleMessage(Message) line: 8807	
+	WindowManagerService$H(Handler).dispatchMessage(Message) line: 102	
+	Looper.loop() line: 154	
+	DisplayThread(HandlerThread).run() line: 61	
+	DisplayThread(ServiceThread).run() line: 46	
+
+
+
+
+Thread [android.display] (Suspended (breakpoint at line 2103 in WindowState))	
+	owns: HashMap  (id=110)	
+	owns: ActivityManagerService  (id=132)	
+	WindowState.destroySavedSurface() line: 2103	
+	AppWindowToken.destroySavedSurfaces() line: 577	
+	WindowSurfacePlacer.performSurfacePlacementInner(boolean) line: 398	
+	WindowSurfacePlacer.performSurfacePlacementLoop() line: 232	
+	WindowSurfacePlacer.performSurfacePlacement() line: 180	
+	WindowManagerService.resizeStack(int, Rect, SparseArray, SparseArray, SparseArray) line: 5245	
+	ActivityStackSupervisor.resizeStackUncheckedLocked(ActivityStack, Rect, Rect, Rect) line: 2110	
+	ActivityStack.continueUpdateBounds() line: 509	
+	ActivityStackSupervisor.continueUpdateBounds(int) line: 2057	
+	ActivityStackSupervisor.notifyAppTransitionDone() line: 2062	
+	ActivityManagerService$LocalService.notifyAppTransitionFinished() line: 21894	
+	WindowManagerService$H.handleMessage(Message) line: 8807	
+	WindowManagerService$H(Handler).dispatchMessage(Message) line: 102	
+	Looper.loop() line: 154	
+	DisplayThread(HandlerThread).run() line: 61	
+	DisplayThread(ServiceThread).run() line: 46	
+
+
+
+Thread [main] (Suspended (breakpoint at line 5662 in ViewRootImpl))	
+	ViewRootImpl.relayoutWindow(WindowManager$LayoutParams, int, boolean) line: 5662	
+	ViewRootImpl.performTraversals() line: 1758	
+	ViewRootImpl.doTraversal() line: 1254	
+	ViewRootImpl$TraversalRunnable.run() line: 6300	
+	Choreographer$CallbackRecord.run(long) line: 874	
+	Choreographer.doCallbacks(int, long) line: 686	
+	Choreographer.doFrame(long, int) line: 621	
+	Choreographer$FrameDisplayEventReceiver.run() line: 860	
+	Handler.handleCallback(Message) line: 751	
+	Choreographer$FrameHandler(Handler).dispatchMessage(Message) line: 95	
+	Looper.loop() line: 154	
+	ActivityThread.main(String[]) line: 6088	
+	Method.invoke(Object, Object...) line: not available [native method]	
+	ZygoteInit$MethodAndArgsCaller.run() line: 886	
+	ZygoteInit.main(String[]) line: 776	
+
