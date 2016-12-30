@@ -1,0 +1,94 @@
+Thread [Binder:372_1] (Suspended)	
+	owns: HashMap  (id=117)	
+	owns: ActivityManagerService  (id=118)	
+	DividerSnapAlgorithm.<init>(Resources, int, int, int, boolean, Rect) line: 112	
+	TaskStack.getStackDockedModeBounds(Rect, Rect, int, Rect, int, boolean) line: 743	
+	TaskStack.attachDisplayContent(DisplayContent) line: 669	
+	WindowManagerService.attachStack(int, int, boolean) line: 5085	
+	ActivityStack.attachDisplay(ActivityStackSupervisor$ActivityDisplay, boolean) line: 455	
+	ActivityStackSupervisor$ActivityContainer.attachToDisplayLocked(ActivityStackSupervisor$ActivityDisplay, boolean) line: 3995	
+	ActivityStackSupervisor.createStackOnDisplay(int, int, boolean) line: 2328	
+	ActivityStackSupervisor.getStack(int, boolean, boolean) line: 1932	
+	ActivityStackSupervisor.restoreRecentTaskLocked(TaskRecord, int) line: 2371	
+	ActivityStackSupervisor.anyTaskForIdLocked(int, boolean, int) line: 714	
+	ActivityStackSupervisor.startActivityFromRecentsInner(int, Bundle) line: 4436	
+	ActivityManagerService.startActivityFromRecents(int, Bundle) line: 4705	
+	ActivityManagerService(ActivityManagerNative).onTransact(int, Parcel, Parcel, int) line: 367	
+	ActivityManagerService.onTransact(int, Parcel, Parcel, int) line: 2793	
+	ActivityManagerService(Binder).execTransact(int, long, long, int) line: 565	
+	
+	
+	
+	
+Thread [android.display] (Suspended (breakpoint at line 738 in WindowState))	
+	owns: HashMap  (id=117)	
+	owns: ActivityManagerService  (id=118)	
+	WindowState.computeFrameLw(Rect, Rect, Rect, Rect, Rect, Rect, Rect, Rect) line: 738	
+	PhoneWindowManager.layoutWindowLw(WindowManagerPolicy$WindowState, WindowManagerPolicy$WindowState) line: 4956	
+	WindowSurfacePlacer.performLayoutLockedInner(DisplayContent, boolean, boolean) line: 995	
+	WindowSurfacePlacer.applySurfaceChangesTransaction(boolean, int, int, int) line: 652	
+	WindowSurfacePlacer.performSurfacePlacementInner(boolean) line: 317	
+	WindowSurfacePlacer.performSurfacePlacementLoop() line: 232	
+	WindowSurfacePlacer.performSurfacePlacement() line: 180	
+	WindowManagerService.resizeStack(int, Rect, SparseArray, SparseArray, SparseArray) line: 5245	
+	ActivityStackSupervisor.resizeStackUncheckedLocked(ActivityStack, Rect, Rect, Rect) line: 2110	
+	ActivityStack.continueUpdateBounds() line: 509	
+	ActivityStackSupervisor.continueUpdateBounds(int) line: 2057	
+	ActivityStackSupervisor.notifyAppTransitionDone() line: 2062	
+	ActivityManagerService$LocalService.notifyAppTransitionFinished() line: 21894	
+	WindowManagerService$H.handleMessage(Message) line: 8807	
+	WindowManagerService$H(Handler).dispatchMessage(Message) line: 102	
+	Looper.loop() line: 154	
+	DisplayThread(HandlerThread).run() line: 61	
+	DisplayThread(ServiceThread).run() line: 46	
+
+
+
+Thread [Binder:372_2] (Suspended (breakpoint at line 522 in ActivityStack))	
+	owns: ActivityManagerService  (id=118)	
+	ActivityStack.updateBoundsAllowed(Rect, Rect, Rect) line: 522	
+	ActivityStackSupervisor.resizeStackUncheckedLocked(ActivityStack, Rect, Rect, Rect) line: 2076	
+	ActivityStackSupervisor.resizeStackLocked(int, Rect, Rect, Rect, boolean, boolean, boolean) line: 2036	
+	ActivityStackSupervisor.resizeDockedStackLocked(Rect, Rect, Rect, Rect, Rect, boolean, boolean) line: 2218	
+	ActivityStackSupervisor.resizeDockedStackLocked(Rect, Rect, Rect, Rect, Rect, boolean) line: 2170	
+	ActivityStack.attachDisplay(ActivityStackSupervisor$ActivityDisplay, boolean) line: 465	
+	ActivityStackSupervisor$ActivityContainer.attachToDisplayLocked(ActivityStackSupervisor$ActivityDisplay, boolean) line: 3995	
+	ActivityStackSupervisor.createStackOnDisplay(int, int, boolean) line: 2328	
+	ActivityStackSupervisor.getStack(int, boolean, boolean) line: 1932	
+	ActivityStackSupervisor.restoreRecentTaskLocked(TaskRecord, int) line: 2371	
+	ActivityStackSupervisor.anyTaskForIdLocked(int, boolean, int) line: 714	
+	ActivityStackSupervisor.startActivityFromRecentsInner(int, Bundle) line: 4436	
+	ActivityManagerService.startActivityFromRecents(int, Bundle) line: 4705	
+	ActivityManagerService(ActivityManagerNative).onTransact(int, Parcel, Parcel, int) line: 367	
+	ActivityManagerService.onTransact(int, Parcel, Parcel, int) line: 2793	
+	ActivityManagerService(Binder).execTransact(int, long, long, int) line: 565	
+
+
+
+
+Thread [Binder:372_2] (Suspended)	
+	owns: HashMap  (id=117)	
+	owns: ActivityManagerService  (id=118)	
+	TaskStack.getStackDockedModeBounds(Rect, Rect, int, Rect, int, boolean) line: 777	
+	TaskStack.getStackDockedModeBoundsLocked(Rect, boolean) line: 709	
+	WindowManagerService.getStackDockedModeBounds(int, Rect, boolean) line: 5206	
+	ActivityStackSupervisor.resizeDockedStackLocked(Rect, Rect, Rect, Rect, Rect, boolean, boolean) line: 2214	
+	ActivityStackSupervisor.resizeDockedStackLocked(Rect, Rect, Rect, Rect, Rect, boolean) line: 2170	
+	ActivityStack.attachDisplay(ActivityStackSupervisor$ActivityDisplay, boolean) line: 465	
+	ActivityStackSupervisor$ActivityContainer.attachToDisplayLocked(ActivityStackSupervisor$ActivityDisplay, boolean) line: 3995	
+	ActivityStackSupervisor.createStackOnDisplay(int, int, boolean) line: 2328	
+	ActivityStackSupervisor.getStack(int, boolean, boolean) line: 1932	
+	ActivityStackSupervisor.moveTaskToStackUncheckedLocked(TaskRecord, int, boolean, boolean, String) line: 2434	
+	ActivityStackSupervisor.moveTaskToStackLocked(int, int, boolean, boolean, String, boolean, boolean) line: 2492	
+	ActivityStackSupervisor.moveTaskToStackLocked(int, int, boolean, boolean, String, boolean) line: 2449	
+	ActivityStackSupervisor.startActivityFromRecentsInner(int, Bundle) line: 4452	
+	ActivityManagerService.startActivityFromRecents(int, Bundle) line: 4705	
+	ActivityManagerService(ActivityManagerNative).onTransact(int, Parcel, Parcel, int) line: 367	
+	ActivityManagerService.onTransact(int, Parcel, Parcel, int) line: 2793	
+	ActivityManagerService(Binder).execTransact(int, long, long, int) line: 565	
+
+
+anyTaskForIdLocked
+
+	
+

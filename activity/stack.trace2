@@ -1,0 +1,117 @@
+Thread [main] (Suspended (breakpoint at line 862 in DividerView))	
+	DividerView.resizeStack(int, int, DividerSnapAlgorithm$SnapTarget) line: 862	
+	DividerView.resizeStackDelayed(int, int, DividerSnapAlgorithm$SnapTarget) line: 857	
+	DividerView.onTouch(View, MotionEvent) line: 500	
+	DividerHandleView(View).dispatchTouchEvent(MotionEvent) line: 10021	
+	DividerView(ViewGroup).dispatchTransformedTouchEvent(MotionEvent, boolean, View, int) line: 2669	
+	DividerView(ViewGroup).dispatchTouchEvent(MotionEvent) line: 2358	
+	DividerView(View).dispatchPointerEvent(MotionEvent) line: 10245	
+	ViewRootImpl$ViewPostImeInputStage.processPointerEvent(ViewRootImpl$QueuedInputEvent) line: 4433	
+	ViewRootImpl$ViewPostImeInputStage.onProcess(ViewRootImpl$QueuedInputEvent) line: 4301	
+	ViewRootImpl$ViewPostImeInputStage(ViewRootImpl$InputStage).deliver(ViewRootImpl$QueuedInputEvent) line: 3848	
+	ViewRootImpl$NativePostImeInputStage(ViewRootImpl$InputStage).onDeliverToNext(ViewRootImpl$QueuedInputEvent) line: 3901	
+	ViewRootImpl$NativePostImeInputStage(ViewRootImpl$InputStage).forward(ViewRootImpl$QueuedInputEvent) line: 3867	
+	ViewRootImpl$NativePostImeInputStage(ViewRootImpl$AsyncInputStage).forward(ViewRootImpl$QueuedInputEvent) line: 3994	
+	ViewRootImpl$NativePostImeInputStage(ViewRootImpl$InputStage).apply(ViewRootImpl$QueuedInputEvent, int) line: 3875	
+	ViewRootImpl$NativePostImeInputStage(ViewRootImpl$AsyncInputStage).apply(ViewRootImpl$QueuedInputEvent, int) line: 4051	
+	ViewRootImpl$NativePostImeInputStage(ViewRootImpl$InputStage).deliver(ViewRootImpl$QueuedInputEvent) line: 3848	
+	ViewRootImpl$EarlyPostImeInputStage(ViewRootImpl$InputStage).onDeliverToNext(ViewRootImpl$QueuedInputEvent) line: 3901	
+	ViewRootImpl$EarlyPostImeInputStage(ViewRootImpl$InputStage).forward(ViewRootImpl$QueuedInputEvent) line: 3867	
+	ViewRootImpl$EarlyPostImeInputStage(ViewRootImpl$InputStage).apply(ViewRootImpl$QueuedInputEvent, int) line: 3875	
+	ViewRootImpl$EarlyPostImeInputStage(ViewRootImpl$InputStage).deliver(ViewRootImpl$QueuedInputEvent) line: 3848	
+	ViewRootImpl.deliverInputEvent(ViewRootImpl$QueuedInputEvent) line: 6209	
+	ViewRootImpl.doProcessInputEvents() line: 6183	
+	ViewRootImpl.enqueueInputEvent(InputEvent, InputEventReceiver, int, boolean) line: 6144	
+	ViewRootImpl$WindowInputEventReceiver.onInputEvent(InputEvent) line: 6312	
+	ViewRootImpl$WindowInputEventReceiver(InputEventReceiver).dispatchInputEvent(int, InputEvent) line: 185	
+	InputEventReceiver.nativeConsumeBatchedInputEvents(long, long) line: not available [native method]	
+	ViewRootImpl$WindowInputEventReceiver(InputEventReceiver).consumeBatchedInputEvents(long) line: 176	
+	ViewRootImpl.doConsumeBatchedInput(long) line: 6283	
+	ViewRootImpl$ConsumeBatchedInputRunnable.run() line: 6335	
+	Choreographer$CallbackRecord.run(long) line: 874	
+	Choreographer.doCallbacks(int, long) line: 686	
+	Choreographer.doFrame(long, int) line: 615	
+	Choreographer$FrameDisplayEventReceiver.run() line: 860	
+	Handler.handleCallback(Message) line: 751	
+	Choreographer$FrameHandler(Handler).dispatchMessage(Message) line: 95	
+	Looper.loop() line: 154	
+	ActivityThread.main(String[]) line: 6088	
+	Method.invoke(Object, Object...) line: not available [native method]	
+	ZygoteInit$MethodAndArgsCaller.run() line: 886	
+	ZygoteInit.main(String[]) line: 776	
+
+
+
+Thread [main] (Suspended (breakpoint at line 862 in DividerView))	
+	DividerView.resizeStack(int, int, DividerSnapAlgorithm$SnapTarget) line: 862	
+	DividerView.resizeStackDelayed(int, int, DividerSnapAlgorithm$SnapTarget) line: 857	
+	DividerView.-com_android_systemui_stackdivider_DividerView_lambda$1(boolean, DividerSnapAlgorithm$SnapTarget, ValueAnimator) line: 579	
+	DividerView$-android_animation_ValueAnimator_getFlingAnimator_int_position_com_android_internal_policy_DividerSnapAlgorithm$SnapTarget_snapTarget_long_endDelay_LambdaImpl0.onAnimationUpdate(ValueAnimator) line: not available	
+	ValueAnimator.animateValue(float) line: 1347	
+	ValueAnimator.setCurrentFraction(float) line: 612	
+	ValueAnimator.setCurrentPlayTime(long) line: 578	
+	ValueAnimator.start(boolean) line: 1002	
+	ValueAnimator.start() line: 1011	
+	DividerView.fling(int, float, boolean, boolean) line: 563	
+	DividerView.stopDragging(int, float, boolean, boolean) line: 410	
+	DividerView.onTouch(View, MotionEvent) line: 512	
+	DividerHandleView(View).dispatchTouchEvent(MotionEvent) line: 10021	
+	DividerView(ViewGroup).dispatchTransformedTouchEvent(MotionEvent, boolean, View, int) line: 2639	
+	DividerView(ViewGroup).dispatchTouchEvent(MotionEvent) line: 2358	
+	DividerView(View).dispatchPointerEvent(MotionEvent) line: 10245	
+	ViewRootImpl$ViewPostImeInputStage.processPointerEvent(ViewRootImpl$QueuedInputEvent) line: 4433	
+	ViewRootImpl$ViewPostImeInputStage.onProcess(ViewRootImpl$QueuedInputEvent) line: 4301	
+	ViewRootImpl$ViewPostImeInputStage(ViewRootImpl$InputStage).deliver(ViewRootImpl$QueuedInputEvent) line: 3848	
+	ViewRootImpl$NativePostImeInputStage(ViewRootImpl$InputStage).onDeliverToNext(ViewRootImpl$QueuedInputEvent) line: 3901	
+	ViewRootImpl$NativePostImeInputStage(ViewRootImpl$InputStage).forward(ViewRootImpl$QueuedInputEvent) line: 3867	
+	ViewRootImpl$NativePostImeInputStage(ViewRootImpl$AsyncInputStage).forward(ViewRootImpl$QueuedInputEvent) line: 3994	
+	ViewRootImpl$NativePostImeInputStage(ViewRootImpl$InputStage).apply(ViewRootImpl$QueuedInputEvent, int) line: 3875	
+	ViewRootImpl$NativePostImeInputStage(ViewRootImpl$AsyncInputStage).apply(ViewRootImpl$QueuedInputEvent, int) line: 4051	
+	ViewRootImpl$NativePostImeInputStage(ViewRootImpl$InputStage).deliver(ViewRootImpl$QueuedInputEvent) line: 3848	
+	ViewRootImpl$EarlyPostImeInputStage(ViewRootImpl$InputStage).onDeliverToNext(ViewRootImpl$QueuedInputEvent) line: 3901	
+	ViewRootImpl$EarlyPostImeInputStage(ViewRootImpl$InputStage).forward(ViewRootImpl$QueuedInputEvent) line: 3867	
+	ViewRootImpl$EarlyPostImeInputStage(ViewRootImpl$InputStage).apply(ViewRootImpl$QueuedInputEvent, int) line: 3875	
+	ViewRootImpl$EarlyPostImeInputStage(ViewRootImpl$InputStage).deliver(ViewRootImpl$QueuedInputEvent) line: 3848	
+	ViewRootImpl.deliverInputEvent(ViewRootImpl$QueuedInputEvent) line: 6209	
+	ViewRootImpl.doProcessInputEvents() line: 6183	
+	ViewRootImpl.enqueueInputEvent(InputEvent, InputEventReceiver, int, boolean) line: 6144	
+	ViewRootImpl$WindowInputEventReceiver.onInputEvent(InputEvent) line: 6312	
+	ViewRootImpl$WindowInputEventReceiver(InputEventReceiver).dispatchInputEvent(int, InputEvent) line: 185	
+	InputEventReceiver.nativeConsumeBatchedInputEvents(long, long) line: not available [native method]	
+	ViewRootImpl$WindowInputEventReceiver(InputEventReceiver).consumeBatchedInputEvents(long) line: 176	
+	ViewRootImpl.doConsumeBatchedInput(long) line: 6283	
+	ViewRootImpl$ConsumeBatchedInputRunnable.run() line: 6335	
+	Choreographer$CallbackRecord.run(long) line: 874	
+	Choreographer.doCallbacks(int, long) line: 686	
+	Choreographer.doFrame(long, int) line: 615	
+	Choreographer$FrameDisplayEventReceiver.run() line: 860	
+	Handler.handleCallback(Message) line: 751	
+	Choreographer$FrameHandler(Handler).dispatchMessage(Message) line: 95	
+	Looper.loop() line: 154	
+	ActivityThread.main(String[]) line: 6088	
+	Method.invoke(Object, Object...) line: not available [native method]	
+	ZygoteInit$MethodAndArgsCaller.run() line: 886	
+	ZygoteInit.main(String[]) line: 776	
+
+
+Thread [Binder:225_1] (Suspended (breakpoint at line 415 in DockedStackDividerController))	
+	owns: HashMap  (id=112)	
+	owns: ActivityManagerService  (id=113)	
+	DockedStackDividerController.notifyDockedStackMinimizedChanged(boolean, long) line: 415	
+	DockedStackDividerController.setMinimizedDockedStack(boolean) line: 664	
+	DockedStackDividerController.notifyDockedStackExistsChanged(boolean) line: 391	
+	WindowManagerService.detachStackLocked(DisplayContent, TaskStack) line: 5106	
+	WindowManagerService.detachStack(int) line: 5121	
+	ActivityStack.detachDisplay() line: 476	
+	ActivityStackSupervisor$ActivityContainer.detachLocked() line: 4068	
+	ActivityStackSupervisor$ActivityContainer.onTaskListEmptyLocked() line: 4144	
+	ActivityStack.removeTask(TaskRecord, String, int) line: 5150	
+	ActivityStack.removeTask(TaskRecord, String) line: 5078	
+	ActivityStack.removeActivityFromHistoryLocked(ActivityRecord, TaskRecord, String) line: 3845	
+	ActivityStack.activityDestroyedLocked(IBinder, String) line: 4080	
+	ActivityManagerService.activityDestroyed(IBinder) line: 6935	
+	ActivityManagerService(ActivityManagerNative).onTransact(int, Parcel, Parcel, int) line: 598	
+	ActivityManagerService.onTransact(int, Parcel, Parcel, int) line: 2793	
+	ActivityManagerService(Binder).execTransact(int, long, long, int) line: 565	
+
+
