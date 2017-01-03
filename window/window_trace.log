@@ -153,5 +153,27 @@ Thread [Binder:209_2] (Suspended (breakpoint at line 2318 in WindowManagerServic
 	Session.onTransact(int, Parcel, Parcel, int) line: 136	
 	Session(Binder).execTransact(int, long, long, int) line: 565	
 
-	
+Thread [android.display] (Suspended (breakpoint at line 211 in Task))	
+	owns: HashMap  (id=122)	
+	owns: ActivityManagerService  (id=123)	
+	Task.setBounds(Rect, Configuration) line: 211	
+	Task.resizeLocked(Rect, Configuration, boolean) line: 304	
+	WindowManagerService.resizeTask(int, Rect, Configuration, boolean, boolean) line: 5300	
+	ActivityStackSupervisor.resizeTaskLocked(TaskRecord, Rect, int, boolean, boolean) line: 2314	
+	ActivityManagerService.resizeTask(int, Rect, int) line: 9431	
+	TaskPositioner$WindowPositionerEventReceiver.onInputEvent(InputEvent) line: 165	
+	TaskPositioner$WindowPositionerEventReceiver(InputEventReceiver).dispatchInputEvent(int, InputEvent) line: 185	
+	InputEventReceiver.nativeConsumeBatchedInputEvents(long, long) line: not available [native method]	
+	TaskPositioner$WindowPositionerEventReceiver(InputEventReceiver).consumeBatchedInputEvents(long) line: 176	
+	TaskPositioner$WindowPositionerEventReceiver(BatchedInputEventReceiver).doConsumeBatchedInput(long) line: 49	
+	BatchedInputEventReceiver$BatchedInputRunnable.run() line: 78	
+	Choreographer$CallbackRecord.run(long) line: 874	
+	Choreographer.doCallbacks(int, long) line: 686	
+	Choreographer.doFrame(long, int) line: 615	
+	Choreographer$FrameDisplayEventReceiver.run() line: 860	
+	Handler.handleCallback(Message) line: 751	
+	Choreographer$FrameHandler(Handler).dispatchMessage(Message) line: 95	
+	Looper.loop() line: 154	
+	DisplayThread(HandlerThread).run() line: 61	
+	DisplayThread(ServiceThread).run() line: 46	
 
