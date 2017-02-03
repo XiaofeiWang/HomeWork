@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="app_name">Animation</string>
+    <string name="hello_world">Hello world!</string>
+    <string name="action_settings">Settings</string>
+<string name="animation_2_text_1">Freedom</string>
+<string name="animation_2_text_2">is nothing else but</string>
+    <string name="animation_2_text_3">a chance to be better.</string>
+    <string name="animation_2_text_4">— Albert Camus</string>
+    <string name="animation_2_instructions">Select an animation:</string>
+</resources>
