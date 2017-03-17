@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="app_name">WindowTest</string>
+    <string name="hello_world">Hello world!</string>
+    <string name="action_settings">Settings</string>
+    <string name="show_singletop_actvity">Show singleTop Actvity</string>
+    <string name="show_normal_actvity">Show normal Actvity</string>
+    <string name="show_singletask_actvity">Show singleTask Actvity</string>
+    <string name="show_singleinstance_actvity">Show singleinstance Actvity</string>
+</resources>
