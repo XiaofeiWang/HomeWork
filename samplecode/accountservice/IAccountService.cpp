@@ -18,6 +18,10 @@ class BpAccountService: public BpInterface<IAccountService>
 public:
     BpAccountService(const sp<IBinder>& impl) : BpInterface<IAccountService>(impl)
     {
+        ALOGD("BpAccountService ctor");
+        CallStack stack(LOG_TAG);
+        stack.update();
+        stack.dump(0);
     }
 
     virtual int32_t getlocked() {

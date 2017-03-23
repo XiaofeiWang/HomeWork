@@ -33,3 +33,23 @@ LOCAL_MODULE_TAGS := optional
 
 include $(BUILD_EXECUTABLE)
 
+#build accountclient's executable
+###############################################################
+include $(CLEAR_VARS)
+
+LOCAL_SRC_FILES := accountclient_main.cpp
+
+LOCAL_CFLAGS:= -DLOG_TAG=\"AccountService\"
+
+LOCAL_SHARED_LIBRARIES := libbinder \
+		libutils \
+		libcutils \
+		liblog \
+		libaccountservice
+
+LOCAL_MODULE := accountclient
+
+LOCAL_MODULE_TAGS := optional
+
+include $(BUILD_EXECUTABLE)
+

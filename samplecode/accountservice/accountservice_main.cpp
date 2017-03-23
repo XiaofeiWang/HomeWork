@@ -23,7 +23,6 @@ int main(int argc, char* argv[])
         return -1;
     }
 
-    LOG_ALWAYS_FATAL("FATAL AccountService");
     ALOGD("join AccountService Thread");
     /*
      * We're the only thread in existence, so we're just going to process
