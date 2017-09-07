@@ -19,22 +19,17 @@ public:
     BpAccountService(const sp<IBinder>& impl) : BpInterface<IAccountService>(impl)
     {
         ALOGD("BpAccountService ctor");
-        CallStack stack(LOG_TAG);
-        stack.update();
-        stack.dump(0);
     }
 
     virtual int32_t getlocked() {
         ALOGD("client getlocked");
-        CallStack stack(LOG_TAG);
-        stack.update();
-        stack.dump(0);
         Parcel data, reply;
         data.writeInterfaceToken(IAccountService::getInterfaceDescriptor());
-        status_t status = remote()->transact(BnAccountService::GET_LOCKED, data, &reply);
-        if (status != NO_ERROR) {
-            ALOGD("getlocked could not contact remote %d\n", status);
-            return -1;
+        remote()->transact(BnAccountService::GET_LOCKED, data, &reply);
+        int32_t ret = reply.readExceptionCode();
+        if (ret != 0) {
+            ALOGD("getlocked could not contact remote %d\n", ret);
+            return ret;
         }
         return reply.readInt32();
     }
@@ -45,16 +40,18 @@ public:
         Parcel data, reply;
         data.writeInterfaceToken(IAccountService::getInterfaceDescriptor());
         data.writeInt32(locked);
-        status_t status = remote()->transact(BnAccountService::SET_LOCKED, data, &reply);
-        if (status != NO_ERROR) {
-            ALOGD("getlocked could not contact remote %d\n", status);
-            return -1;
+        remote()->transact(BnAccountService::SET_LOCKED, data, &reply);
+        int32_t ret = reply.readExceptionCode();
+        if (ret != 0) {
+            ALOGD("setlocked could not contact remote %d\n", ret);
+            return ret;
         }
-        return reply.readInt32();
+        ret = reply.readInt32();
+        return ret;
     }
 };
 
-IMPLEMENT_META_INTERFACE(AccountService, "android.wangxiaofei.account");
+IMPLEMENT_META_INTERFACE(AccountService, "android.wangxiaofei.IAccountService");
 
 status_t BnAccountService::onTransact(
     uint32_t code, const Parcel& data, Parcel* reply, uint32_t flags)
@@ -63,17 +60,20 @@ status_t BnAccountService::onTransact(
         case GET_LOCKED:{
             ALOGD("remote GETLOCKED");
             CHECK_INTERFACE(IAccountService, data, reply);
-            int32_t ret = getlocked();
-            ALOGD("remote GETLOCKED: %d", ret);
-            reply->writeInt32(ret);
-            return NO_ERROR;
+            int32_t locked = getlocked();
+            ALOGD("remote GETLOCKED: %d", locked);
+            reply->writeNoException();
+            reply->writeInt32(locked);
+            return OK;
             } break;
         case SET_LOCKED: {
             ALOGD("remote SETLOCKED");
             CHECK_INTERFACE(IAccountService, data, reply);
             int32_t locked = data.readInt32();
-            setlocked(locked);
-            return NO_ERROR;
+            int32_t ret = setlocked(locked);
+            reply->writeNoException();
+            reply->writeInt32(ret);
+            return OK;
             } break;
         default:
             return BBinder::onTransact(code, data, reply, flags);

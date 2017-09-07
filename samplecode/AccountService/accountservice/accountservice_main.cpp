@@ -17,7 +17,7 @@ int main(int argc, char* argv[])
     ALOGD("AccountService start");
     android::sp<android::IServiceManager> sm = android::defaultServiceManager();
     android::sp<android::AccountService> accountService = new android::AccountService();
-    android::status_t ret = sm->addService(android::String16("android.wangxiaofei.account"), accountService);
+    android::status_t ret = sm->addService(android::String16("accountservice"), accountService);
     if (ret != android::OK) {
         ALOGD("Could not register AccountService !");
         return -1;

@@ -27,7 +27,7 @@ LOCAL_SHARED_LIBRARIES := libbinder \
 		liblog \
 		libaccountservice
 
-LOCAL_MODULE := accountservice
+LOCAL_MODULE := accountservice_main
 
 LOCAL_MODULE_TAGS := optional
 

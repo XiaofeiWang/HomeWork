@@ -13,9 +13,8 @@ using namespace android;
 class IAccountService: public IInterface {
 public:
     enum {
-        TEST = IBinder::FIRST_CALL_TRANSACTION + 0,
-        GET_LOCKED = IBinder::FIRST_CALL_TRANSACTION + 1,
-        SET_LOCKED = IBinder::FIRST_CALL_TRANSACTION + 2,
+        GET_LOCKED = IBinder::FIRST_CALL_TRANSACTION + 0,
+        SET_LOCKED = IBinder::FIRST_CALL_TRANSACTION + 1,
     };
 
     DECLARE_META_INTERFACE(AccountService);

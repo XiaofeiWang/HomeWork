@@ -13,8 +13,9 @@ int main(int argc, char* argv[])
 {
     ALOGD("AccountClient start");
     android::sp<android::IServiceManager> sm = android::defaultServiceManager();
-    sp<IBinder> binder = sm->getService(android::String16("android.wangxiaofei.account"));
+    sp<IBinder> binder = sm->getService(android::String16("accountservice"));
     sp<IAccountService> accountservice = interface_cast<IAccountService>(binder);
-    accountservice->setlocked(10);
+    ALOGD("AccountClient accountservice->setlocked(10): %d",accountservice->setlocked(10));
+    ALOGD("AccountClient accountservice->getlocked(): %d",accountservice->getlocked());
     return 0;
 }

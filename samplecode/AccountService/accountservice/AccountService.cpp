@@ -18,5 +18,5 @@ int32_t AccountService::getlocked()
 int32_t AccountService::setlocked(const int32_t& locked)
 {
     mLocked = locked;
-    return NO_ERROR;
+    return OK;
 }
