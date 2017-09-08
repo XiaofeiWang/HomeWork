@@ -20,6 +20,11 @@
 #include <sched.h>
 #include <sys/resource.h>
 
+#include <stdint.h>
+#include <stdlib.h>
+
+#include <system/window.h>
+#include <utils/Errors.h>
 #include <EGL/egl.h>
 #include <EGL/eglext.h>
 #include <GLES/gl.h>
@@ -28,18 +33,66 @@
 #include <utils/Timers.h>
 
 #include <ui/GraphicBuffer.h>
-#include <EGLUtils.h>
 #include <gui/SurfaceControl.h>
-#include <EGL/egl.h>
+#include <gui/SurfaceComposerClient.h>
+#include <gui/ISurfaceComposer.h>
+#include <gui/Surface.h>
+#include <ui/DisplayInfo.h>
 
 using namespace android;
 
-const int yuvTexWidth = 600;
-const int yuvTexHeight = 480;
-const int yuvTexUsage = GraphicBuffer::USAGE_HW_TEXTURE |
-        GraphicBuffer::USAGE_SW_WRITE_RARELY;
-const int yuvTexFormat = HAL_PIXEL_FORMAT_YV12;
+status_t selectConfigForPixelFormat(
+        EGLDisplay dpy,
+        EGLint const* attrs,
+        int32_t format,
+        EGLConfig* outConfig)
+{
+    EGLint numConfigs = -1, n=0;
 
+    if (!attrs)
+        return BAD_VALUE;
+
+    if (outConfig == NULL)
+        return BAD_VALUE;
+
+    // Get all the "potential match" configs...
+    if (eglGetConfigs(dpy, NULL, 0, &numConfigs) == EGL_FALSE)
+        return BAD_VALUE;
+
+    EGLConfig* const configs = (EGLConfig*)malloc(sizeof(EGLConfig)*numConfigs);
+    if (eglChooseConfig(dpy, attrs, configs, numConfigs, &n) == EGL_FALSE) {
+        free(configs);
+        return BAD_VALUE;
+    }
+
+    int i;
+    EGLConfig config = NULL;
+    for (i=0 ; i<n ; i++) {
+        EGLint nativeVisualId = 0;
+        eglGetConfigAttrib(dpy, configs[i], EGL_NATIVE_VISUAL_ID, &nativeVisualId);
+        if (nativeVisualId>0 && format == nativeVisualId) {
+            config = configs[i];
+            break;
+        }
+    }
+
+    free(configs);
+
+    if (i<n) {
+        *outConfig = config;
+        return NO_ERROR;
+    }
+
+    return NAME_NOT_FOUND;
+}
+
+void memset16(uint16_t* dst, uint16_t value, size_t size)
+{
+    size >>= 1;
+    while (size--) {
+        *dst++ = value;
+    }
+}
 
 int main(int argc, char *argv[])
 {
@@ -51,7 +104,10 @@ int main(int argc, char *argv[])
     EGLint w, h;
     EGLDisplay dpy;
     status_t err; 
-    GLuint texture;
+    GLuint texture1;
+    GLuint texture2;
+    int format;
+
     EGLint configAttribs[] = {
             EGL_SURFACE_TYPE, EGL_WINDOW_BIT,
             EGL_RENDERABLE_TYPE, EGL_OPENGL_ES_BIT,
@@ -61,7 +117,7 @@ int main(int argc, char *argv[])
     err = surfaceComposerClient->initCheck();
     if (err != NO_ERROR) {
         fprintf(stderr, "SurfaceComposerClient::initCheck error: %#x\n", err);
-        return;
+        return err;
     }
 
     // Get main display parameters.
@@ -71,7 +127,7 @@ int main(int argc, char *argv[])
     err = SurfaceComposerClient::getDisplayInfo(mainDpy, &mainDpyInfo);
     if (err != NO_ERROR) {
         fprintf(stderr, "ERROR: unable to get display characteristics\n");
-        return;
+        return err;
     }
 
     uint32_t width, height;
@@ -90,31 +146,36 @@ int main(int argc, char *argv[])
             PIXEL_FORMAT_RGBX_8888, ISurfaceComposerClient::eOpaque);
     if (surfaceControl == NULL || !surfaceControl->isValid()) {
         fprintf(stderr, "Failed to create SurfaceControl\n");
-        return;
+        return -1;
     }
 
     SurfaceComposerClient::openGlobalTransaction();
     err = surfaceControl->setLayer(0x7FFFFFFF);     // always on top
     if (err != NO_ERROR) {
         fprintf(stderr, "SurfaceComposer::setLayer error: %#x\n", err);
-        return;
+        return err;
     }
 
     err = surfaceControl->show();
     if (err != NO_ERROR) {
         fprintf(stderr, "SurfaceComposer::show error: %#x\n", err);
-        return;
+        return err;
     }
     SurfaceComposerClient::closeGlobalTransaction();
 
     dpy = eglGetDisplay(EGL_DEFAULT_DISPLAY);
     eglInitialize(dpy, &majorVersion, &minorVersion);
+    sp<ANativeWindow> anw = surfaceControl->getSurface();
+    EGLNativeWindowType window = (EGLNativeWindowType) anw.get();
+    if ((err = window->query(window, NATIVE_WINDOW_FORMAT, &format)) < 0) {
+        return err;
+    }
 
-    status_t err = EGLUtils::selectConfigForNativeWindow(
-            dpy, configAttribs, (EGLNativeWindowType)surfaceControl.getSurface(), &config);
+    err = selectConfigForPixelFormat(
+            dpy, configAttribs, format, &config);
     if (err) {
         fprintf(stderr, "couldn't find an EGLConfig matching the screen format\n");
-        return 0;
+        return err;
     }
     surface = eglCreateWindowSurface(dpy, config, window, NULL);
     context = eglCreateContext(dpy, config, NULL, NULL);
@@ -123,30 +184,100 @@ int main(int argc, char *argv[])
     eglQuerySurface(dpy, surface, EGL_HEIGHT, &h);
 
     printf("w=%d, h=%d\n", w, h);
-    glBindTexture(GL_TEXTURE_2D, 0);
-    glTexParameterx(GL_TEXTURE_2D, GL_TEXTURE_MAG_FILTER, GL_LINEAR);
-    glTexParameterx(GL_TEXTURE_2D, GL_TEXTURE_MIN_FILTER, GL_LINEAR);
-    glTexParameterx(GL_TEXTURE_2D, GL_TEXTURE_WRAP_S, GL_REPEAT);
-    glTexParameterx(GL_TEXTURE_2D, GL_TEXTURE_WRAP_T, GL_REPEAT);
 
-    GraphicBuffer graphicBuffer1 = new GraphicBuffer(w, h, HAL_PIXEL_FORMAT_RGBA_8888,
+    /*
+    * set the GraphicBuffer1
+    */
+    sp<GraphicBuffer> graphicBuffer1 = new GraphicBuffer(w, h, HAL_PIXEL_FORMAT_RGBA_8888,
              GraphicBuffer::USAGE_HW_TEXTURE | GraphicBuffer::USAGE_SW_WRITE_RARELY);
-    uint32_t* bits;
-    graphicBuffer1->lock(GRALLOC_USAGE_SW_WRITE_OFTEN, (void**)(&bits));
-    ssize_t bpr = outBuffer.stride * bytesPerPixel(graphicBuffer1.format);
-    android_memset16((uint16_t*)outBuffer.bits, 0xF800, bpr*graphicBuffer1.height);
+    uint16_t* bits1;
+    graphicBuffer1->lock(GRALLOC_USAGE_SW_WRITE_OFTEN, (void**)(&bits1));
+    ssize_t bpr1 = graphicBuffer1->getStride() * bytesPerPixel(graphicBuffer1->getPixelFormat());
+    memset16(bits1, 0xF800, bpr1*graphicBuffer1->getHeight());
     err = graphicBuffer1->unlock();
     if (err != 0) {
         fprintf(stderr, "graphicBuffer1->unlock() failed: %d\n", err);
-        return 0;
+        return err;
     }
 
-    EGLClientBuffer clientBuffer = (EGLClientBuffer)graphicBuffer1->getNativeBuffer();
-    EGLImageKHR img = eglCreateImageKHR(dpy, EGL_NO_CONTEXT, EGL_NATIVE_BUFFER_ANDROID,
-            clientBuffer, 0);
-    if (img == EGL_NO_IMAGE_KHR) {
-        return false;
+    /*
+    * set the GraphicBuffer2
+    */
+    sp<GraphicBuffer> graphicBuffer2 = new GraphicBuffer(w, h, HAL_PIXEL_FORMAT_RGBA_8888,
+             GraphicBuffer::USAGE_HW_TEXTURE | GraphicBuffer::USAGE_SW_WRITE_RARELY);
+    uint16_t* bits2;
+    graphicBuffer2->lock(GRALLOC_USAGE_SW_WRITE_OFTEN, (void**)(&bits2));
+    ssize_t bpr2 = graphicBuffer2->getStride() * bytesPerPixel(graphicBuffer2->getPixelFormat());
+    memset16(bits2, 0xF800, bpr2*graphicBuffer2->getHeight());
+    err = graphicBuffer2->unlock();
+    if (err != 0) {
+        fprintf(stderr, "graphicBuffer2->unlock() failed: %d\n", err);
+        return err;
     }
-    glGenTextures(1, &texture);
-    
+
+    /*
+    * set the param1
+    */
+    Rect crop1(0, 0, w, h);
+    EGLClientBuffer clientBuffer1 = (EGLClientBuffer)graphicBuffer1->getNativeBuffer();
+    EGLint attrs1[] = {
+        EGL_IMAGE_PRESERVED_KHR,        EGL_TRUE,
+        EGL_IMAGE_CROP_LEFT_ANDROID,    crop1.left,
+        EGL_IMAGE_CROP_TOP_ANDROID,     crop1.top,
+        EGL_IMAGE_CROP_RIGHT_ANDROID,   crop1.right,
+        EGL_IMAGE_CROP_BOTTOM_ANDROID,  crop1.bottom,
+        EGL_NONE,
+    };
+    EGLImageKHR img1 = eglCreateImageKHR(dpy, EGL_NO_CONTEXT, EGL_NATIVE_BUFFER_ANDROID,
+            clientBuffer1, attrs1);
+    if (img1 == EGL_NO_IMAGE_KHR) {
+        return err;
+    }
+    glGenTextures(1, &texture1);
+    glBindTexture(GL_TEXTURE_EXTERNAL_OES, texture1);
+    glEGLImageTargetTexture2DOES(GL_TEXTURE_EXTERNAL_OES, (GLeglImageOES)img1);
+    glTexParameterx(GL_TEXTURE_EXTERNAL_OES, GL_TEXTURE_MAG_FILTER, GL_LINEAR);
+    glTexParameterx(GL_TEXTURE_EXTERNAL_OES, GL_TEXTURE_MIN_FILTER, GL_LINEAR);
+    glTexParameterx(GL_TEXTURE_EXTERNAL_OES, GL_TEXTURE_WRAP_S, GL_REPEAT);
+    glTexParameterx(GL_TEXTURE_EXTERNAL_OES, GL_TEXTURE_WRAP_T, GL_REPEAT);
+
+    /*
+    * set the param2
+    */
+    Rect crop2(0, 0, w, h);
+    EGLClientBuffer clientBuffer2 = (EGLClientBuffer)graphicBuffer2->getNativeBuffer();
+    EGLint attrs2[] = {
+        EGL_IMAGE_PRESERVED_KHR,        EGL_TRUE,
+        EGL_IMAGE_CROP_LEFT_ANDROID,    crop2.left,
+        EGL_IMAGE_CROP_TOP_ANDROID,     crop2.top,
+        EGL_IMAGE_CROP_RIGHT_ANDROID,   crop2.right,
+        EGL_IMAGE_CROP_BOTTOM_ANDROID,  crop2.bottom,
+        EGL_NONE,
+    };
+    EGLImageKHR img2 = eglCreateImageKHR(dpy, EGL_NO_CONTEXT, EGL_NATIVE_BUFFER_ANDROID,
+            clientBuffer2, attrs2);
+    if (img2 == EGL_NO_IMAGE_KHR) {
+        return err;
+    }
+    glGenTextures(1, &texture2);
+    glBindTexture(GL_TEXTURE_EXTERNAL_OES, texture2);
+    glEGLImageTargetTexture2DOES(GL_TEXTURE_EXTERNAL_OES, (GLeglImageOES)img2);
+    glTexParameterx(GL_TEXTURE_EXTERNAL_OES, GL_TEXTURE_MAG_FILTER, GL_LINEAR);
+    glTexParameterx(GL_TEXTURE_EXTERNAL_OES, GL_TEXTURE_MIN_FILTER, GL_LINEAR);
+    glTexParameterx(GL_TEXTURE_EXTERNAL_OES, GL_TEXTURE_WRAP_S, GL_REPEAT);
+    glTexParameterx(GL_TEXTURE_EXTERNAL_OES, GL_TEXTURE_WRAP_T, GL_REPEAT);
+
+    for(;;) {
+        glClearColor(0.0f, 0.0f, 1.0f, 1.0f);
+        glClear( GL_DEPTH_BUFFER_BIT | GL_COLOR_BUFFER_BIT);
+        glBindTexture(GL_TEXTURE_EXTERNAL_OES, texture1);
+        glEnable(GL_TEXTURE_EXTERNAL_OES);
+        glDrawTexiOES(0, 0, 0, w, h);
+
+        glBindTexture(GL_TEXTURE_EXTERNAL_OES, texture2);
+        glEnable(GL_TEXTURE_EXTERNAL_OES);
+        glDrawTexiOES(w / 2, h / 2, 0, w / 2 , h / 2);
+        eglSwapBuffers(dpy, surface);
+    }
+    return 0;
 }
